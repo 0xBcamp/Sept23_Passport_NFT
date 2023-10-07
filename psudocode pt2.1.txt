@@ -1,0 +1,66 @@
+// SPDX-License-Identifier: MIT
+pragma solidity >=0.7.0 <0.9.0;
+
+// Import the ERC-721 interface for NFTs and the interface smart contract
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "./BCAMP_Psudocode.sol";
+
+// Solidity smart contract to mint NFTs with information from another contract
+contract NFTPasportMinter is ERC721 {
+    
+    //Declare tokens to be used, can be changed (to US Dollar Coin for example) for contract purposes
+    DummyToken dummytoken;
+    
+    // Declare an ERC-721 NFT contract
+    NFTPassport nftPassport
+
+    //Declare fee for minting NFT Passport
+    uint256 public tokenFee;
+
+    //Declare number of passports minted
+    uint256 public tokenCounter
+
+    // Constructor to initialize the NFT contract, tokenID can be chaned to fit situation
+    constructor(address _tokenId) ERC721("Global NFT Passport","NFTPassportMinter") {
+        dummytoken = DummyToken(_dummytokenAddress);
+        uint8 tokenDecimals = dummytoken.decimals();
+        tokenFee = 1000 * (10**tokenDecimals); //This Gas Fee to mint the NFT Passport is a mock price for now.
+        tokenCounter = 0; //Number of NFT Passports initially minted
+    }
+
+    // Function to check the users balance to see if they can mint an NFT Passport
+    function checkTokenBalance() public view returns(uint256) {
+        return dummytoken.balanceOf(address(this));
+    }
+    
+    // Internal function to fetch additional information from the source contract
+    function getBCAMP_Psudocode(uint256 _tokenId) internal view returns (string memory) {
+        // Implement the logic to retrieve information from the source contract
+        // For example, call a function on the source contract to obtain the desired information
+        // Return the retrieved information as a string
+        // Example: return sourceContract.getInfo(_tokenId);
+        return BCAMP_Psudocode.getInfo(_tokenId);
+    }
+
+    // Function to mint the NFT Passport with information from the source contract
+    function mintNFTPassport(string memory _tokenURI) public returns (bytes32){
+       
+        // Check if the sender is the owner of the NFT in the source contract
+        require(nftPassport.ownerOf(_tokenId) == msg.sender, "You are not the owner of the source NFT.");
+
+        // Check if sender has the required gas fee
+        require(tokenFee <= dummytoken.balanceOf(address(this)), "You do not have the required Token Fee.");
+        
+        // To give Passport ID Numbers
+        uint256 newTokenID = tokenCounter;
+        
+        // Fetch additional information from the interface source contract
+        string memory additionalInfo = getBCAMP_Psudocode(_tokenId);
+
+        requestIdToSender[newTokenID] = msg.sender;
+
+        
+        // Mint the NFT with the additional information
+        _safeMint(msg.sender, additionalInfo, newTokenID);
+        _setTokenURI(newTokenID, _tokenURI);
+        tokenCounter += 1;

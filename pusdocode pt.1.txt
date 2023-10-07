@@ -1,0 +1,79 @@
+// SPDX-License-Identifier: MIT
+pragma solidity >=0.7.0 <0.9.0;
+
+// Declare an interface to define the functions for setting and getting data
+interface UserDataInterface {
+    function setInformation(string memory _newFirstName, string memory, _newMiddileInitials, string memory _newLastName, string memory, _newHomeCountry, string memory _newPlaceOfBirth, uint256 _newDateOfBirth) external;
+    function getFirstName() external view returns (string memory);
+    function getMiddleInitials() external view returns (string memory);
+    function getLastName() external view returns (string memory);
+    function getHomeCountry() external view returns (string memory);
+    function getPlaceOfBirth() external view returns (string memory);
+    function getDateOfBirth() external view returns (uint256);
+}
+
+// Declare a contract that implements the interface
+contract UserDataContract is UserDataInterface {
+    
+    // State variables to store the first name and date of birth
+    string public firstName;
+    string public middleInitials;
+    string public lastName;
+    string public homeCountry;
+    string public placeOfBirth;
+    uint256 public dateOfBirth;
+    
+   
+   
+    // Implement the interface's setinformation function
+    function setInformation(string memory _newFirstName, string memory _newMiddileInitials, string memory _newLastName, string memory, _newHomeCountry, string memory _newPlaceOfBirth, uint256 _newDateOfBirth) public override {
+        firstName = _newFirstName;
+        middleInitials = _newMiddileInitials;
+        lastName = _newLastName;
+        homeCountry = _newHomeCountry;
+        placeOfBirth = _newPlaceOfBirth;
+        dateOfBirth = _newDateOfBirth;
+    }
+
+    // Implement the each of the interfaces's function
+    function getFirstName() public view override returns (string memory) {
+        return firstName;
+    }
+
+    function getMiddleInitials() public view override returns (string memory) {
+        return middleInitials;
+    }
+
+    function getLastName() public view override returns (string memory) {
+        return lastName;
+    }
+
+    function getHomeCountry() public view override returns (string memory) {
+        return homeCountry;
+    }
+
+    function getPlaceOfBirth() public view override returns (string memory) {
+        return placeOfBirth;
+    }
+
+    function getDateOfBirth() public view override returns (uint256) {
+        return dateOfBirth;
+    }
+
+    // Constructor to set the owner when the contract is deployed
+    constructor() {
+        owner = msg.sender;
+    }
+
+    // Modifier to restrict access to the owner
+    modifier onlyOwner() {
+        require(msg.sender == owner, "Only the owner can access this function.");
+        _; // Continue executing the function if the condition is met
+    }
+
+    //Allow applicant to see information
+    function viewMyId() public view returns(uint) {
+        require(msg.sender == owner)
+        return StudentId;
+    }
+   
