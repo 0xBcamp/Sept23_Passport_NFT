@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
+pragma solidity ^0.8.13;
 
 import {Test, console} from "forge-std/Test.sol";
 import {PassportNFTScript} from "../script/PassportNFT.s.sol";
@@ -72,6 +72,7 @@ contract PassportNftTest is Test {
     }
 
     function testGetPassport() external createPassport {
+        vm.prank(user);
         (
             string memory _name,
             string memory _placeOfBirth,
@@ -79,7 +80,7 @@ contract PassportNftTest is Test {
             ,
             uint256 _socialSecurityNumber,
             uint256 _driversLicenceNumber
-        ) = passportNft.getPassport(user);
+        ) = passportNft.getPassport();
         assertEq(_name, name);
         assertEq(_placeOfBirth, placeOfBirth);
         assertEq(_dateOfBirth, dateOfBirth);

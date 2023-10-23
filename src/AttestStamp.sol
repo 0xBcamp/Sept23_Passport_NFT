@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
+pragma solidity ^0.8.13;
 
 import {IEAS, AttestationRequest, AttestationRequestData, Attestation} from "@ethereum-attestation-service/contracts/IEAS.sol";
 import {EMPTY_UID, NO_EXPIRATION_TIME} from "@ethereum-attestation-service/contracts/Common.sol";

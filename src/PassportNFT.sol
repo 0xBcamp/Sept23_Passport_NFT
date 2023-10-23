@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
+pragma solidity ^0.8.13;
 
 import {ERC721, IERC721} from "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import {ERC721URIStorage} from "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
@@ -54,6 +54,63 @@ contract PassportNFT is ERC721, ERC721URIStorage, AttestStamp {
     ) ERC721("PassportNFT", "MTK") AttestStamp(eas, schemaUID) {}
 
     /**
+     * @notice Returns the passport ID associated with a user.
+     * @param user The address of the user.
+     * @return The passport ID.
+     */
+    function getPassportId(address user) external view returns (uint256) {
+        return userToPassportId[user];
+    }
+
+    /**
+     * @notice Returns the passport details for a user.
+     * @dev Reverts if the user does not have a passport.
+     * @return name The name of the passport holder.
+     * @return placeOfBirth The place of birth of the passport holder.
+     * @return dateOfBirth The date of birth of the passport holder.
+     * @return issueDate The issue date of the passport.
+     * @return socialSecurityNumber The Social Security Number of the passport holder.
+     * @return driversLicenceNumber The Driver's License Number of the passport holder.
+     */
+    function getPassport()
+        external
+        view
+        returns (
+            string memory name,
+            string memory placeOfBirth,
+            uint256 dateOfBirth,
+            uint256 issueDate,
+            uint256 socialSecurityNumber,
+            uint256 driversLicenceNumber
+        )
+    {
+        uint256 passportId = userToPassportId[msg.sender];
+        if (passportId == 0) {
+            revert PassportNFT__PassportNotMinted();
+        }
+        Passport memory passport = passportIdToUser[passportId];
+        name = passport.name;
+        placeOfBirth = passport.placeOfBirth;
+        dateOfBirth = passport.dateOfBirth;
+        issueDate = passport.issueDate;
+        socialSecurityNumber = passport.socialSecurityNumber;
+        driversLicenceNumber = passport.driversLicenceNumber;
+    }
+
+    /**
+     * @notice Returns the attestation stamps for a user's passport.
+     * @param user The address of the user.
+     * @return stamps An array of the attestation stamps.
+     */
+    function getStamps(
+        address user
+    ) external view returns (bytes32[] memory stamps) {
+        uint256 passportId = userToPassportId[user];
+        Passport memory passport = passportIdToUser[passportId];
+        return passport.stampAttestions;
+    }
+
+    /**
      * @notice Creates a new Passport NFT for the sender.
      * @dev Only allows creating a passport if the sender has not created one before.
      * @param _name Name of the passport holder.
@@ -84,9 +141,9 @@ contract PassportNFT is ERC721, ERC721URIStorage, AttestStamp {
             driversLicenceNumber: _driversLicenceNumber,
             stampAttestions: new bytes32[](0)
         });
+        userToPassportId[msg.sender] = tokenId;
         _safeMint(msg.sender, tokenId);
         _setTokenURI(tokenId, uri);
-        userToPassportId[msg.sender] = tokenId;
         emit PassportCreated(msg.sender);
     }
 
@@ -100,7 +157,7 @@ contract PassportNFT is ERC721, ERC721URIStorage, AttestStamp {
     function grantStamp(
         string calldata name,
         string calldata country
-    ) external returns (bytes32 attestationUID) {
+    ) public returns (bytes32 attestationUID) {
         uint256 passportId = userToPassportId[msg.sender];
         Passport memory passport = passportIdToUser[passportId];
         if (passportId == 0) {
@@ -119,6 +176,24 @@ contract PassportNFT is ERC721, ERC721URIStorage, AttestStamp {
             block.timestamp
         );
         passportIdToUser[passportId].stampAttestions.push(attestationUID);
+    }
+
+    /**
+     * @notice Transfers a token from one address to another.
+     * @dev Overrides the transferFrom function in the ERC721 contract. Reverts if the sender and recipient are not the zero address.
+     * @param from The address to transfer the token from.
+     * @param to The address to transfer the token to.
+     * @param tokenId The ID of the token to transfer.
+     */
+    function transferFrom(
+        address from,
+        address to,
+        uint256 tokenId
+    ) public override(ERC721, IERC721) {
+        if (from != address(0) && to != address(0)) {
+            revert PassportNFT__PassportCannotBeTransfered();
+        }
+        super.transferFrom(from, to, tokenId);
     }
 
     /**
@@ -143,83 +218,5 @@ contract PassportNFT is ERC721, ERC721URIStorage, AttestStamp {
         bytes4 interfaceId
     ) public view override(ERC721, ERC721URIStorage) returns (bool) {
         return super.supportsInterface(interfaceId);
-    }
-
-    /**
-     * @notice Transfers a token from one address to another.
-     * @dev Overrides the transferFrom function in the ERC721 contract. Reverts if the sender and recipient are not the zero address.
-     * @param from The address to transfer the token from.
-     * @param to The address to transfer the token to.
-     * @param tokenId The ID of the token to transfer.
-     */
-    function transferFrom(
-        address from,
-        address to,
-        uint256 tokenId
-    ) public override(ERC721, IERC721) {
-        if (from != address(0) && to != address(0)) {
-            revert PassportNFT__PassportCannotBeTransfered();
-        }
-        super.transferFrom(from, to, tokenId);
-    }
-
-    /**
-     * @notice Returns the passport ID associated with a user.
-     * @param user The address of the user.
-     * @return The passport ID.
-     */
-    function getPassportId(address user) external view returns (uint256) {
-        return userToPassportId[user];
-    }
-
-    /**
-     * @notice Returns the passport details for a user.
-     * @dev Reverts if the user does not have a passport.
-     * @param user The address of the user.
-     * @return name The name of the passport holder.
-     * @return placeOfBirth The place of birth of the passport holder.
-     * @return dateOfBirth The date of birth of the passport holder.
-     * @return issueDate The issue date of the passport.
-     * @return socialSecurityNumber The Social Security Number of the passport holder.
-     * @return driversLicenceNumber The Driver's License Number of the passport holder.
-     */
-    function getPassport(
-        address user
-    )
-        external
-        view
-        returns (
-            string memory name,
-            string memory placeOfBirth,
-            uint256 dateOfBirth,
-            uint256 issueDate,
-            uint256 socialSecurityNumber,
-            uint256 driversLicenceNumber
-        )
-    {
-        if (userToPassportId[user] == 0) {
-            revert PassportNFT__PassportNotMinted();
-        }
-        uint256 passportId = userToPassportId[user];
-        Passport memory passport = passportIdToUser[passportId];
-        name = passport.name;
-        placeOfBirth = passport.placeOfBirth;
-        dateOfBirth = passport.dateOfBirth;
-        issueDate = passport.issueDate;
-        socialSecurityNumber = passport.socialSecurityNumber;
-        driversLicenceNumber = passport.driversLicenceNumber;
-    }
-
-    /**
-     * @notice Returns the attestation stamps for a user's passport.
-     * @param user The address of the user.
-     * @return stamps An array of the attestation stamps.
-     */
-    function getStamps(
-        address user
-    ) external view returns (bytes32[] memory stamps) {
-        uint256 passportId = userToPassportId[user];
-        Passport memory passport = passportIdToUser[passportId];
-        return passport.stampAttestions;
     }
 }

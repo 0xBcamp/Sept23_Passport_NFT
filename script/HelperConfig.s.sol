@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
+pragma solidity ^0.8.13;
 
 import {Script, console} from "forge-std/Script.sol";
 import {IEAS, EAS} from "@ethereum-attestation-service/contracts/EAS.sol";
