@@ -151,10 +151,10 @@ contract PassportNFT is ERC721, ERC721URIStorage, AttestStamp {
      * @notice Grants a stamp to the passport holder.
      * @dev Reverts if the user does not have a passport or if the details do not match.
      * @param name Name of the passport holder.
-     * @param country Country of the passport holder.
+     * @param country Country where the passport holder is visiting.
      * @return attestationUID The UID of the stamp attestation.
      */
-    function grantStamp(
+    function createStamp(
         string calldata name,
         string calldata country
     ) public returns (bytes32 attestationUID) {
