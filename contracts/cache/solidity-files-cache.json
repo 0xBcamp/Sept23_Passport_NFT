@@ -52,7 +52,7 @@
       }
     },
     "lib/eas-contracts/contracts/EAS.sol": {
-      "lastModificationDate": 1700470348430,
+      "lastModificationDate": 1701670306370,
       "contentHash": "9d4bb66814972418e1fc1df7131e0be1",
       "sourceName": "lib/eas-contracts/contracts/EAS.sol",
       "solcConfig": {
@@ -385,6 +385,55 @@
       "artifacts": {
         "ISchemaResolver": {
           "0.8.21+commit.d9974bed.Linux.gcc": "ISchemaResolver.sol/ISchemaResolver.json"
+        }
+      }
+    },
+    "lib/eas-contracts/contracts/resolver/SchemaResolver.sol": {
+      "lastModificationDate": 1701670313450,
+      "contentHash": "9177840d6508a51abff7102aaf525516",
+      "sourceName": "lib/eas-contracts/contracts/resolver/SchemaResolver.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/eas-contracts/contracts/Common.sol",
+        "lib/eas-contracts/contracts/IEAS.sol",
+        "lib/eas-contracts/contracts/ISchemaRegistry.sol",
+        "lib/eas-contracts/contracts/Semver.sol",
+        "lib/eas-contracts/contracts/resolver/ISchemaResolver.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Strings.sol",
+        "lib/openzeppelin-contracts/contracts/utils/math/Math.sol",
+        "lib/openzeppelin-contracts/contracts/utils/math/SignedMath.sol"
+      ],
+      "versionRequirement": "^0.8.4",
+      "artifacts": {
+        "SchemaResolver": {
+          "0.8.21+commit.d9974bed.Linux.gcc": "SchemaResolver.sol/SchemaResolver.json"
         }
       }
     },
@@ -2246,8 +2295,8 @@
       }
     },
     "script/HelperConfig.s.sol": {
-      "lastModificationDate": 1700469810425,
-      "contentHash": "1fa77d69d1bb66b68cc1040310035f2d",
+      "lastModificationDate": 1702760057085,
+      "contentHash": "11dcd256c7a4cac533ec209fb982729c",
       "sourceName": "script/HelperConfig.s.sol",
       "solcConfig": {
         "settings": {
@@ -2313,17 +2362,17 @@
         "lib/openzeppelin-contracts/contracts/utils/math/Math.sol",
         "lib/openzeppelin-contracts/contracts/utils/math/SignedMath.sol"
       ],
-      "versionRequirement": "^0.8.13",
+      "versionRequirement": "^0.8.18",
       "artifacts": {
         "HelperConfig": {
           "0.8.21+commit.d9974bed.Linux.gcc": "HelperConfig.s.sol/HelperConfig.json"
         }
       }
     },
-    "script/PassportNFT.s.sol": {
-      "lastModificationDate": 1700469810457,
-      "contentHash": "8ff86cd822fd346781e92921e60b4242",
-      "sourceName": "script/PassportNFT.s.sol",
+    "script/PassportResolver.s.sol": {
+      "lastModificationDate": 1702760579891,
+      "contentHash": "ab163bfe1b2e7267df86c5f353ce06b6",
+      "sourceName": "script/PassportResolver.s.sol",
       "solcConfig": {
         "settings": {
           "optimizer": {
@@ -2361,6 +2410,7 @@
         "lib/eas-contracts/contracts/Semver.sol",
         "lib/eas-contracts/contracts/eip1271/EIP1271Verifier.sol",
         "lib/eas-contracts/contracts/resolver/ISchemaResolver.sol",
+        "lib/eas-contracts/contracts/resolver/SchemaResolver.sol",
         "lib/forge-std/src/Base.sol",
         "lib/forge-std/src/Script.sol",
         "lib/forge-std/src/StdChains.sol",
@@ -2400,20 +2450,81 @@
         "lib/openzeppelin-contracts/contracts/utils/math/Math.sol",
         "lib/openzeppelin-contracts/contracts/utils/math/SignedMath.sol",
         "script/HelperConfig.s.sol",
-        "src/AttestStamp.sol",
-        "src/PassportNFT.sol"
+        "src/PassportResolver.sol"
       ],
-      "versionRequirement": "^0.8.13",
+      "versionRequirement": "^0.8.18",
       "artifacts": {
-        "PassportNFTScript": {
-          "0.8.21+commit.d9974bed.Linux.gcc": "PassportNFT.s.sol/PassportNFTScript.json"
+        "PassportResolverScript": {
+          "0.8.21+commit.d9974bed.Linux.gcc": "PassportResolver.s.sol/PassportResolverScript.json"
         }
       }
     },
-    "src/AttestStamp.sol": {
-      "lastModificationDate": 1700469702438,
-      "contentHash": "379ad33856cf11791827f6305a21b57e",
-      "sourceName": "src/AttestStamp.sol",
+    "src/PassportResolver.sol": {
+      "lastModificationDate": 1702760040618,
+      "contentHash": "634017c63d2b7b83e2bcda0b6c6bf643",
+      "sourceName": "src/PassportResolver.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/eas-contracts/contracts/Common.sol",
+        "lib/eas-contracts/contracts/IEAS.sol",
+        "lib/eas-contracts/contracts/ISchemaRegistry.sol",
+        "lib/eas-contracts/contracts/Semver.sol",
+        "lib/eas-contracts/contracts/resolver/ISchemaResolver.sol",
+        "lib/eas-contracts/contracts/resolver/SchemaResolver.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/IERC165.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/IERC4906.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/IERC721.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/draft-IERC6093.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721Receiver.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC721/extensions/ERC721URIStorage.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC721/extensions/IERC721Metadata.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Context.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Strings.sol",
+        "lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol",
+        "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
+        "lib/openzeppelin-contracts/contracts/utils/math/Math.sol",
+        "lib/openzeppelin-contracts/contracts/utils/math/SignedMath.sol"
+      ],
+      "versionRequirement": "^0.8.18",
+      "artifacts": {
+        "PassportResolver": {
+          "0.8.21+commit.d9974bed.Linux.gcc": "PassportResolver.sol/PassportResolver.json"
+        }
+      }
+    },
+    "src/StampAttester.sol": {
+      "lastModificationDate": 1702754968051,
+      "contentHash": "4fcc3489f0e57e251d948923bab09d73",
+      "sourceName": "src/StampAttester.sol",
       "solcConfig": {
         "settings": {
           "optimizer": {
@@ -2448,78 +2559,17 @@
         "lib/eas-contracts/contracts/ISchemaRegistry.sol",
         "lib/eas-contracts/contracts/resolver/ISchemaResolver.sol"
       ],
-      "versionRequirement": "^0.8.13",
+      "versionRequirement": "^0.8.18",
       "artifacts": {
-        "AttestStamp": {
-          "0.8.21+commit.d9974bed.Linux.gcc": "AttestStamp.sol/AttestStamp.json"
+        "StampAttester": {
+          "0.8.21+commit.d9974bed.Linux.gcc": "StampAttester.sol/StampAttester.json"
         }
       }
     },
-    "src/PassportNFT.sol": {
-      "lastModificationDate": 1700469702503,
-      "contentHash": "c6d1dab199fc122dd88d3091e36900da",
-      "sourceName": "src/PassportNFT.sol",
-      "solcConfig": {
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "ipfs",
-            "appendCBOR": true
-          },
-          "outputSelection": {
-            "*": {
-              "": [
-                "ast"
-              ],
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ]
-            }
-          },
-          "evmVersion": "paris",
-          "libraries": {}
-        }
-      },
-      "imports": [
-        "lib/eas-contracts/contracts/Common.sol",
-        "lib/eas-contracts/contracts/IEAS.sol",
-        "lib/eas-contracts/contracts/ISchemaRegistry.sol",
-        "lib/eas-contracts/contracts/resolver/ISchemaResolver.sol",
-        "lib/openzeppelin-contracts/contracts/interfaces/IERC165.sol",
-        "lib/openzeppelin-contracts/contracts/interfaces/IERC4906.sol",
-        "lib/openzeppelin-contracts/contracts/interfaces/IERC721.sol",
-        "lib/openzeppelin-contracts/contracts/interfaces/draft-IERC6093.sol",
-        "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
-        "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721.sol",
-        "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721Receiver.sol",
-        "lib/openzeppelin-contracts/contracts/token/ERC721/extensions/ERC721URIStorage.sol",
-        "lib/openzeppelin-contracts/contracts/token/ERC721/extensions/IERC721Metadata.sol",
-        "lib/openzeppelin-contracts/contracts/utils/Context.sol",
-        "lib/openzeppelin-contracts/contracts/utils/Strings.sol",
-        "lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol",
-        "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
-        "lib/openzeppelin-contracts/contracts/utils/math/Math.sol",
-        "lib/openzeppelin-contracts/contracts/utils/math/SignedMath.sol",
-        "src/AttestStamp.sol"
-      ],
-      "versionRequirement": "^0.8.13",
-      "artifacts": {
-        "PassportNFT": {
-          "0.8.21+commit.d9974bed.Linux.gcc": "PassportNFT.sol/PassportNFT.json"
-        }
-      }
-    },
-    "test/PassportNFT.t.sol": {
-      "lastModificationDate": 1700470409356,
-      "contentHash": "13f5e3aea432db4e6beb3418fbf2cd3d",
-      "sourceName": "test/PassportNFT.t.sol",
+    "test/PassportResolver.t.sol": {
+      "lastModificationDate": 1702760545777,
+      "contentHash": "4bbfe84c1ecfd2cdb7a69cf907cc2ea6",
+      "sourceName": "test/PassportResolver.t.sol",
       "solcConfig": {
         "settings": {
           "optimizer": {
@@ -2557,6 +2607,7 @@
         "lib/eas-contracts/contracts/Semver.sol",
         "lib/eas-contracts/contracts/eip1271/EIP1271Verifier.sol",
         "lib/eas-contracts/contracts/resolver/ISchemaResolver.sol",
+        "lib/eas-contracts/contracts/resolver/SchemaResolver.sol",
         "lib/forge-std/lib/ds-test/src/test.sol",
         "lib/forge-std/src/Base.sol",
         "lib/forge-std/src/Script.sol",
@@ -2601,14 +2652,13 @@
         "lib/openzeppelin-contracts/contracts/utils/math/Math.sol",
         "lib/openzeppelin-contracts/contracts/utils/math/SignedMath.sol",
         "script/HelperConfig.s.sol",
-        "script/PassportNFT.s.sol",
-        "src/AttestStamp.sol",
-        "src/PassportNFT.sol"
+        "script/PassportResolver.s.sol",
+        "src/PassportResolver.sol"
       ],
-      "versionRequirement": "^0.8.13",
+      "versionRequirement": "^0.8.18",
       "artifacts": {
-        "PassportNftTest": {
-          "0.8.21+commit.d9974bed.Linux.gcc": "PassportNFT.t.sol/PassportNftTest.json"
+        "PassportResolverTest": {
+          "0.8.21+commit.d9974bed.Linux.gcc": "PassportResolver.t.sol/PassportResolverTest.json"
         }
       }
     }

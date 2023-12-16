@@ -615,7 +615,7 @@
     "id": 2902,
     "exportedSymbols": {
       "Address": [
-        48181
+        48508
       ],
       "AttestationRequestData": [
         2041
@@ -633,7 +633,7 @@
         2901
       ],
       "EIP712": [
-        49360
+        49687
       ],
       "InvalidSignature": [
         17
@@ -648,7 +648,7 @@
         27
       ],
       "SignatureChecker": [
-        49535
+        49862
       ]
     },
     "nodeType": "SourceUnit",
@@ -675,7 +675,7 @@
         "file": "@openzeppelin/contracts/utils/cryptography/EIP712.sol",
         "nameLocation": "-1:-1:-1",
         "scope": 2902,
-        "sourceUnit": 49361,
+        "sourceUnit": 49688,
         "symbolAliases": [
           {
             "foreign": {
@@ -683,7 +683,7 @@
               "name": "EIP712",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 49360,
+              "referencedDeclaration": 49687,
               "src": "68:6:6",
               "typeDescriptions": {}
             },
@@ -701,7 +701,7 @@
         "file": "@openzeppelin/contracts/utils/cryptography/SignatureChecker.sol",
         "nameLocation": "-1:-1:-1",
         "scope": 2902,
-        "sourceUnit": 49536,
+        "sourceUnit": 49863,
         "symbolAliases": [
           {
             "foreign": {
@@ -709,7 +709,7 @@
               "name": "SignatureChecker",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 49535,
+              "referencedDeclaration": 49862,
               "src": "148:16:6",
               "typeDescriptions": {}
             },
@@ -727,7 +727,7 @@
         "file": "@openzeppelin/contracts/utils/Address.sol",
         "nameLocation": "-1:-1:-1",
         "scope": 2902,
-        "sourceUnit": 48182,
+        "sourceUnit": 48509,
         "symbolAliases": [
           {
             "foreign": {
@@ -735,7 +735,7 @@
               "name": "Address",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 48181,
+              "referencedDeclaration": 48508,
               "src": "248:7:6",
               "typeDescriptions": {}
             },
@@ -886,7 +886,7 @@
                 "747:7:6"
               ],
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 48181,
+              "referencedDeclaration": 48508,
               "src": "747:7:6"
             },
             "typeName": {
@@ -1263,7 +1263,7 @@
                     "2131:6:6"
                   ],
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 49360,
+                  "referencedDeclaration": 49687,
                   "src": "2131:6:6"
                 },
                 "nodeType": "ModifierInvocation",
@@ -1364,7 +1364,7 @@
                       "name": "_domainSeparatorV4",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 49256,
+                      "referencedDeclaration": 49583,
                       "src": "2475:18:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$__$returns$_t_bytes32_$",
@@ -3173,7 +3173,7 @@
                       "name": "_hashTypedDataV4",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 49293,
+                      "referencedDeclaration": 49620,
                       "src": "4345:16:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$_t_bytes32_$returns$_t_bytes32_$",
@@ -3417,10 +3417,10 @@
                           "name": "SignatureChecker",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 49535,
+                          "referencedDeclaration": 49862,
                           "src": "4900:16:6",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_type$_t_contract$_SignatureChecker_$49535_$",
+                            "typeIdentifier": "t_type$_t_contract$_SignatureChecker_$49862_$",
                             "typeString": "type(library SignatureChecker)"
                           }
                         },
@@ -3432,7 +3432,7 @@
                         "memberLocation": "4917:19:6",
                         "memberName": "isValidSignatureNow",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 49482,
+                        "referencedDeclaration": 49809,
                         "src": "4900:36:6",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_view$_t_address_$_t_bytes32_$_t_bytes_memory_ptr_$returns$_t_bool_$",
@@ -4318,7 +4318,7 @@
                       "name": "_hashTypedDataV4",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 49293,
+                      "referencedDeclaration": 49620,
                       "src": "5626:16:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$_t_bytes32_$returns$_t_bytes32_$",
@@ -4562,10 +4562,10 @@
                           "name": "SignatureChecker",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 49535,
+                          "referencedDeclaration": 49862,
                           "src": "6021:16:6",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_type$_t_contract$_SignatureChecker_$49535_$",
+                            "typeIdentifier": "t_type$_t_contract$_SignatureChecker_$49862_$",
                             "typeString": "type(library SignatureChecker)"
                           }
                         },
@@ -4577,7 +4577,7 @@
                         "memberLocation": "6038:19:6",
                         "memberName": "isValidSignatureNow",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 49482,
+                        "referencedDeclaration": 49809,
                         "src": "6021:36:6",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_view$_t_address_$_t_bytes32_$_t_bytes_memory_ptr_$returns$_t_bool_$",
@@ -4878,7 +4878,7 @@
                 "728:6:6"
               ],
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 49360,
+              "referencedDeclaration": 49687,
               "src": "728:6:6"
             },
             "id": 2588,
@@ -4898,20 +4898,20 @@
         "fullyImplemented": true,
         "linearizedBaseContracts": [
           2901,
-          49360,
-          46489
+          49687,
+          46816
         ],
         "name": "EIP1271Verifier",
         "nameLocation": "709:15:6",
         "scope": 2902,
         "usedErrors": [
           2593,
-          48217,
-          48219
+          48544,
+          48546
         ],
         "usedEvents": [
           2612,
-          46469
+          46796
         ]
       }
     ],
