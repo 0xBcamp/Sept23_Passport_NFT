@@ -10,6 +10,7 @@ contract PassportResolverTest is Test {
     address member;
     address bob = makeAddr("user");
     address sam = makeAddr("sam");
+    uint256 mintPrice;
 
     string name = "John Doe";
     string placeOfBirth = "USA";
@@ -17,9 +18,8 @@ contract PassportResolverTest is Test {
     uint256 dateOfBirth = 1694725470;
 
     modifier createPassport() {
-        vm.prank(member);
-        passportResolver.createPassport(
-            bob,
+        hoax(bob, 2 ether);
+        passportResolver.createPassport{value: mintPrice}(
             name,
             placeOfBirth,
             dateOfBirth,
@@ -32,6 +32,7 @@ contract PassportResolverTest is Test {
         PassportResolverScript script = new PassportResolverScript();
         passportResolver = script.run();
         member = passportResolver.getAllAuthorizedMembers()[0];
+        mintPrice = passportResolver.MINT_PRICE();
         vm.broadcast();
     }
 
@@ -53,13 +54,10 @@ contract PassportResolverTest is Test {
         testCreatePassport();
     }
 
-    function testCannotCreatePassportIfNotAuthorizedMember() public {
-        vm.prank(sam);
-        vm.expectRevert(
-            abi.encodeWithSelector(PassportResolver.Unauthorized.selector, sam)
-        );
-        passportResolver.createPassport(
-            bob,
+    function testCannotCreateIfInsufficientAmount() public {
+        hoax(bob, 1 ether);
+        vm.expectRevert(PassportResolver.InsufficientAmount.selector);
+        passportResolver.createPassport{value: 0.02 ether}(
             name,
             placeOfBirth,
             dateOfBirth,
@@ -154,7 +152,9 @@ contract PassportResolverTest is Test {
         uint256 initialBalance = address(this).balance;
         uint256 sendValue = 100;
 
-        payable(address(passportResolver)).send(sendValue);
+        bool success = payable(address(passportResolver)).send(sendValue);
+        require(!success);
+
         assertEq(address(this).balance, initialBalance);
     }
 }

@@ -16,45 +16,23 @@ contract PassportResolver is SchemaResolver, ERC721, ERC721URIStorage {
     }
 
     /// @param user The user address for which the passport is created
-    /// @notice This event is emitted when a new Passport is created.
     event PassportCreated(address user);
-
-    /// @notice This error is emitted when a transfer of a Passport NFT is attempted.
-    /// @dev Passports cannot be transferred.
+    
+    error InsufficientAmount();
     error PassportCannotBeTransfered();
-
-    /// @notice This error is emitted when the sender is not authorized.
-    /// @dev The sender must be authorized to perform this operation.
     error Unauthorized(address);
-
-    /// @notice This error is emitted when the member is already authorized.
-    /// @dev A member cannot be authorized more than once.
     error AlreadyAuthorized(address);
-
-    /// @notice This error is emitted when the member is already not authorized.
-    /// @dev A member cannot be unauthorized if it's already not an authorized member.
     error AlreadyUnauthorized(address);
-
-    /// @notice This error is emitted when an attempt is made to authorize the zero address.
-    /// @dev The zero address cannot be authorized.
     error CannotAuthorizeZeroAddress();
-
-    /// @notice This error is emitted when an operation is attempted on a Passport NFT that hasn't been minted yet.
-    /// @dev A passport must be minted before it can be used.
     error PassportNotMinted();
-
-    /// @notice This error is emitted when an attempt is made to mint a passport for an address that has already been minted.
-    /// @dev A passport cannot be minted more than once for the same address.
     error PassportAlreadyMinted();
-
-    /// @notice This error is emitted when the transfer of ether fails
-    /// @dev Any ETH amount sent directly to the contract is automatically sent back
     error TransferFailed();
 
-    /// @notice This variable stores the ID to be assigned to the next Passport NFT that gets minted.
+    uint256 public constant MINT_PRICE = 0.08 ether;
+
     uint256 private _nextTokenId;
-    /// @notice This variable stores the addresses of all authorized members.
     address[] private _authorizedMembers;
+
     /// @notice This mapping stores the index of each member in the authorized members array.
     mapping(address member => uint256 id) private _memberIndex;
     /// @notice This mapping stores whether each member is authorized or not.
@@ -64,7 +42,6 @@ contract PassportResolver is SchemaResolver, ERC721, ERC721URIStorage {
     /// @notice This mapping stores the Passport details associated with each Passport ID.
     mapping(uint256 userId => Passport passport) passportIdToUser;
 
-    /// @dev This modifier checks if the member is authorized.
     modifier onlyAuthorized(address member) {
         if (!_isAuthorzedMember[member]) {
             revert Unauthorized(member);
@@ -185,21 +162,22 @@ contract PassportResolver is SchemaResolver, ERC721, ERC721URIStorage {
     /**
      * @notice Creates a new Passport NFT for the sender.
      * @dev Only allows creating a passport if the sender has not created one before.
-     * @param passportHolder The address of the passport holder (owner)
      * @param _name Name of the passport holder.
      * @param _placeOfBirth Place of birth of the passport holder.
      * @param _dateOfBirth Date of birth of the passport holder.
      * @param uri Token URI for the new passport NFT.
      */
     function createPassport(
-        address passportHolder,
         string calldata _name,
         string calldata _placeOfBirth,
         uint256 _dateOfBirth,
         string memory uri
-    ) public onlyAuthorized(msg.sender) {
-        if (userToPassportId[passportHolder] != 0) {
+    ) public payable {
+        if (userToPassportId[msg.sender] != 0) {
             revert PassportAlreadyMinted();
+        }
+        if (msg.value < MINT_PRICE) {
+            revert InsufficientAmount();
         }
 
         uint256 tokenId = ++_nextTokenId;
@@ -209,10 +187,10 @@ contract PassportResolver is SchemaResolver, ERC721, ERC721URIStorage {
             dateOfBirth: _dateOfBirth,
             issueDate: block.timestamp
         });
-        userToPassportId[passportHolder] = tokenId;
-        _safeMint(passportHolder, tokenId);
+        userToPassportId[msg.sender] = tokenId;
+        _safeMint(msg.sender, tokenId);
         _setTokenURI(tokenId, uri);
-        emit PassportCreated(passportHolder);
+        emit PassportCreated(msg.sender);
     }
 
     /**
