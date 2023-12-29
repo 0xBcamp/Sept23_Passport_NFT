@@ -21,10 +21,10 @@ contract HelperConfig is Script {
     }
 
     function getSepoliaConfig() public pure returns (NetworkConfig memory) {
-        // address eas = 0xC2679fBD37d54388Ce493F1DB75320D236e1815e;
-        // bytes32 schemaUID = 0x4049a6345bfc2c5817406213ba1900245152221ced5fba2d517153ac46c20cd1;
+        // address schemaUID: 0x32a6014fedc1de48e7ba2f24730228a21fb781abfc181ae91e0d22ec0455ddeb,
+        // bytes32 eas: 0xC2679fBD37d54388Ce493F1DB75320D236e1815e
         NetworkConfig memory sepoliaConfig = NetworkConfig({
-            schemaUID: 0x4049a6345bfc2c5817406213ba1900245152221ced5fba2d517153ac46c20cd1,
+            schemaUID: 0x32a6014fedc1de48e7ba2f24730228a21fb781abfc181ae91e0d22ec0455ddeb,
             eas: 0xC2679fBD37d54388Ce493F1DB75320D236e1815e
         });
         return sepoliaConfig;
@@ -40,12 +40,14 @@ contract HelperConfig is Script {
         bool revocable = false;
         SchemaRegistry registry = new SchemaRegistry();
         bytes32 _schemaUID = registry.register(schema, resolver, revocable);
+
         IEAS _eas = new EAS(registry);
 
         NetworkConfig memory anvilConfig = NetworkConfig({
             schemaUID: _schemaUID,
             eas: address(_eas)
         });
+        vm.broadcast();
         return anvilConfig;
     }
 }
