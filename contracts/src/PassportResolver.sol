@@ -5,8 +5,9 @@ import {IEAS, Attestation} from "@ethereum-attestation-service/contracts/IEAS.so
 import {ERC721, IERC721} from "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import {ERC721URIStorage} from "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import {SchemaResolver} from "@ethereum-attestation-service/contracts/resolver/SchemaResolver.sol";
+import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 
-contract PassportResolver is SchemaResolver, ERC721, ERC721URIStorage {
+contract PassportResolver is SchemaResolver, ERC721, ERC721URIStorage, Ownable {
     /// @dev This struct is used to store passport details.
     struct Passport {
         string name; // Name of the passport holder
@@ -17,7 +18,7 @@ contract PassportResolver is SchemaResolver, ERC721, ERC721URIStorage {
 
     /// @param user The user address for which the passport is created
     event PassportCreated(address user);
-    
+
     error InsufficientAmount();
     error PassportCannotBeTransfered();
     error Unauthorized(address);
@@ -52,7 +53,7 @@ contract PassportResolver is SchemaResolver, ERC721, ERC721URIStorage {
     constructor(
         IEAS eas,
         address[] memory initialMembers
-    ) ERC721("PassportNFT", "MTK") SchemaResolver(eas) {
+    ) ERC721("PassportNFT", "MTK") Ownable(msg.sender) SchemaResolver(eas) {
         for (uint256 i = 0; i < initialMembers.length; i++) {
             address member = initialMembers[i];
             if (member == address(0)) {
@@ -69,6 +70,16 @@ contract PassportResolver is SchemaResolver, ERC721, ERC721URIStorage {
      */
     receive() external payable override {
         (bool success, ) = msg.sender.call{value: msg.value}("");
+        if (!success) {
+            revert TransferFailed();
+        }
+    }
+
+    /**
+     * @notice The owner can withdraw the balance of the contract by calling this function.
+     */
+    function withdraw() external onlyOwner {
+      (bool success, ) = payable(owner()).call{value: address(this).balance}("");
         if (!success) {
             revert TransferFailed();
         }

@@ -193,10 +193,10 @@
     "getRevokeTypeHash()": "b83010d3",
     "increaseNonce(uint256)": "79f7573a"
   },
-  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"InvalidNonce\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"InvalidShortString\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"str\",\"type\":\"string\"}],\"name\":\"StringTooLong\",\"type\":\"error\"},{\"anonymous\":false,\"inputs\":[],\"name\":\"EIP712DomainChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"oldNonce\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"newNonce\",\"type\":\"uint256\"}],\"name\":\"NonceIncreased\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"eip712Domain\",\"outputs\":[{\"internalType\":\"bytes1\",\"name\":\"fields\",\"type\":\"bytes1\"},{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"version\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"chainId\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"verifyingContract\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"salt\",\"type\":\"bytes32\"},{\"internalType\":\"uint256[]\",\"name\":\"extensions\",\"type\":\"uint256[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getAttestTypeHash\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getDomainSeparator\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getName\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"getNonce\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getRevokeTypeHash\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"newNonce\",\"type\":\"uint256\"}],\"name\":\"increaseNonce\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"events\":{\"EIP712DomainChanged()\":{\"details\":\"MAY be emitted to signal that the domain could have changed.\"},\"NonceIncreased(uint256,uint256)\":{\"params\":{\"newNonce\":\"The new value.\",\"oldNonce\":\"The previous nonce.\"}}},\"kind\":\"dev\",\"methods\":{\"constructor\":{\"details\":\"Creates a new EIP1271Verifier instance.\",\"params\":{\"version\":\"The current major version of the signing domain\"}},\"eip712Domain()\":{\"details\":\"See {IERC-5267}.\"},\"getAttestTypeHash()\":{\"returns\":{\"_0\":\"The EIP712 type hash for the attest function.\"}},\"getDomainSeparator()\":{\"returns\":{\"_0\":\"The domain separator used in the encoding of the signatures for attest, and revoke.\"}},\"getName()\":{\"returns\":{\"_0\":\"The EIP712 name.\"}},\"getNonce(address)\":{\"params\":{\"account\":\"The requested account.\"},\"returns\":{\"_0\":\"The current nonce.\"}},\"getRevokeTypeHash()\":{\"returns\":{\"_0\":\"The EIP712 type hash for the revoke function.\"}},\"increaseNonce(uint256)\":{\"params\":{\"newNonce\":\"The (higher) new value.\"}}},\"title\":\"EIP1271Verifier\",\"version\":1},\"userdoc\":{\"events\":{\"NonceIncreased(uint256,uint256)\":{\"notice\":\"Emitted when users invalidate nonces by increasing their nonces to (higher) new values.\"}},\"kind\":\"user\",\"methods\":{\"getAttestTypeHash()\":{\"notice\":\"Returns the EIP712 type hash for the attest function.\"},\"getDomainSeparator()\":{\"notice\":\"Returns the domain separator used in the encoding of the signatures for attest, and revoke.\"},\"getName()\":{\"notice\":\"Returns the EIP712 name.\"},\"getNonce(address)\":{\"notice\":\"Returns the current nonce per-account.\"},\"getRevokeTypeHash()\":{\"notice\":\"Returns the EIP712 type hash for the revoke function.\"},\"increaseNonce(uint256)\":{\"notice\":\"Provides users an option to invalidate nonces by increasing their nonces to (higher) new values.\"}},\"notice\":\"EIP1271Verifier typed signatures verifier for EAS delegated attestations.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"lib/eas-contracts/contracts/eip1271/EIP1271Verifier.sol\":\"EIP1271Verifier\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@ethereum-attestation-service/=lib/eas-contracts/\",\":@openzeppelin/=lib/openzeppelin-contracts/\",\":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":eas-contracts/=lib/eas-contracts/contracts/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\"]},\"sources\":{\"lib/eas-contracts/contracts/Common.sol\":{\"keccak256\":\"0x957bd2e6d0d6d637f86208b135c29fbaf4412cb08e5e7a61ede16b80561bf685\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://da1dc9aedbb1d4d39c46c2235918d3adfbc5741dd34a46010cf425d134e7936d\",\"dweb:/ipfs/QmWUk6bXnLaghS2riF3GTFEeURCzgYFMA5woa6AsgPwEgc\"]},\"lib/eas-contracts/contracts/IEAS.sol\":{\"keccak256\":\"0xd5a192f0bcee5372b69b0bb746c26317a2691dd10bfa52adbd08a9b723a55036\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ca836dd01016e7198a0b8e9e79d78512eb9db86dde6afd47f727f18d9a9c33a1\",\"dweb:/ipfs/QmXLTzcLUvA52qpVRUtVvj6L73cTmHk62jGsf6JErXFxD4\"]},\"lib/eas-contracts/contracts/ISchemaRegistry.sol\":{\"keccak256\":\"0x772b1ebcf3e5c93fecb53762e11bbdae75fcb667deea4ac21134fccfe78326e4\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://734ea6ab1e3bea7d8e0d478731c3b8888347ec01601d66d3072398b8984e8517\",\"dweb:/ipfs/QmQHZM7USiV88SUucWV7wwCpURv98dDngtFcsEaEnFwdtp\"]},\"lib/eas-contracts/contracts/eip1271/EIP1271Verifier.sol\":{\"keccak256\":\"0xf247d90a597407475003debeac796ad70e5af8d2dd722ede19d500474b72687a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://fdefcd2e83ae4257bea4c658f3d9f2c7a121788eac696a45a0fbb4f2218fbb39\",\"dweb:/ipfs/QmbSdLsRFukRE9Bt9hTvDLdZs28e8tYgKfFnKMpcNKWv7S\"]},\"lib/eas-contracts/contracts/resolver/ISchemaResolver.sol\":{\"keccak256\":\"0xb74b64e20b90b35004750d2c78ceb114a304975d22d71bd9a2a9de0d483f0395\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://0d0a30499e28e7c4ed62f2d8a88c46623c96830cc23e04ce6e9cd0cd0b11a03d\",\"dweb:/ipfs/QmYWNWu1cn7XDSaFgiMyn2L2coud3DNiGoNrNNo8QYcdyC\"]},\"lib/openzeppelin-contracts/contracts/interfaces/IERC1271.sol\":{\"keccak256\":\"0x85a45f3f10014a0f8be41157a32b6a5f905753ea64a4b64e29fc12b7deeecf39\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://c3c74009ce36136b36c77c23935b8e4a7b4f253be2da2be4fb4a916b1ce43743\",\"dweb:/ipfs/QmcH36v3iN7SJJuF73AunLR2LtNxhVJ1wm63ph4dPZ4pcL\"]},\"lib/openzeppelin-contracts/contracts/interfaces/IERC5267.sol\":{\"keccak256\":\"0x92aa1df62dc3d33f1656d63bede0923e0df0b706ad4137c8b10b0a8fe549fd92\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://c5c0f29195ad64cbe556da8e257dac8f05f78c53f90323c0d2accf8e6922d33a\",\"dweb:/ipfs/QmQ61TED8uaCZwcbh8KkgRSsCav7x7HbcGHwHts3U4DmUP\"]},\"lib/openzeppelin-contracts/contracts/utils/Address.sol\":{\"keccak256\":\"0xaf28a975a78550e45f65e559a3ad6a5ad43b9b8a37366999abd1b7084eb70721\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b7bd24e224f67f65bfadf85dc2929fa965456bb2415478bd0125471b5ce35245\",\"dweb:/ipfs/QmRaydGr8BTHs1kvaZfsNU69pKzUAGFrvABn1KiRSbE51y\"]},\"lib/openzeppelin-contracts/contracts/utils/ShortStrings.sol\":{\"keccak256\":\"0x18a7171df639a934592915a520ecb97c5bbc9675a1105607aac8a94e72bf62c6\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7478e1f13da69a2867ccd883001d836b75620362e743f196376d63ed0c422a1c\",\"dweb:/ipfs/QmWywcQ9TNfwtoqAxbn25d8C5VrV12PrPS9UjtGe6pL2BA\"]},\"lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol\":{\"keccak256\":\"0x32ba59b4b7299237c8ba56319110989d7978a039faf754793064e967e5894418\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://1ae50c8b562427df610cc4540c9bf104acca7ef8e2dcae567ae7e52272281e9c\",\"dweb:/ipfs/QmTHiadFCSJUPpRjNegc5SahmeU8bAoY8i9Aq6tVscbcKR\"]},\"lib/openzeppelin-contracts/contracts/utils/Strings.sol\":{\"keccak256\":\"0x55f102ea785d8399c0e58d1108e2d289506dde18abc6db1b7f68c1f9f9bc5792\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6e52e0a7765c943ef14e5bcf11e46e6139fa044be564881378349236bf2e3453\",\"dweb:/ipfs/QmZEeeXoFPW47amyP35gfzomF9DixqqTEPwzBakv6cZw6i\"]},\"lib/openzeppelin-contracts/contracts/utils/cryptography/ECDSA.sol\":{\"keccak256\":\"0xeed0a08b0b091f528356cbc7245891a4c748682d4f6a18055e8e6ca77d12a6cf\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ba80ba06c8e6be852847e4c5f4492cef801feb6558ae09ed705ff2e04ea8b13c\",\"dweb:/ipfs/QmXRJDv3xHLVQCVXg1ZvR35QS9sij5y9NDWYzMfUfAdTHF\"]},\"lib/openzeppelin-contracts/contracts/utils/cryptography/EIP712.sol\":{\"keccak256\":\"0x999f705a027ed6dc2d4e0df2cc4a509852c6bfd11de1c8161bf88832d0503fd0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://0798def67258d9a3cc20b2b4da7ebf351a5cefe0abfdd665d2d81f8e32f89b21\",\"dweb:/ipfs/QmPEvJosnPfzHNjKvCv2D3891mA2Ww8eUwkqrxBjuYdHCt\"]},\"lib/openzeppelin-contracts/contracts/utils/cryptography/MessageHashUtils.sol\":{\"keccak256\":\"0xba333517a3add42cd35fe877656fc3dfcc9de53baa4f3aabbd6d12a92e4ea435\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://2ceacff44c0fdc81e48e0e0b1db87a2076d3c1fb497341de077bf1da9f6b406c\",\"dweb:/ipfs/QmRUo1muMRAewxrKQ7TkXUtknyRoR57AyEkoPpiuZQ8FzX\"]},\"lib/openzeppelin-contracts/contracts/utils/cryptography/SignatureChecker.sol\":{\"keccak256\":\"0x6b11eb41a228cca35d4b662b4df69fcd75192851365102690f57b2ac01e83fe6\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ab006a2983ed350d2af21ddcdd835dcae3b8340086cc4d088460da5abd041f69\",\"dweb:/ipfs/QmbEacDhkJZiGrgzLjB4pNtE8Z1uudjDw1DvcDUTVQFsLG\"]},\"lib/openzeppelin-contracts/contracts/utils/math/Math.sol\":{\"keccak256\":\"0x005ec64c6313f0555d59e278f9a7a5ab2db5bdc72a027f255a37c327af1ec02d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4ece9f0b9c8daca08c76b6b5405a6446b6f73b3a15fab7ff56e296cbd4a2c875\",\"dweb:/ipfs/QmQyRpyPRL5SQuAgj6SHmbir3foX65FJjbVTTQrA2EFg6L\"]},\"lib/openzeppelin-contracts/contracts/utils/math/SignedMath.sol\":{\"keccak256\":\"0x5f7e4076e175393767754387c962926577f1660dd9b810187b9002407656be72\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7d533a1c97cd43a57cd9c465f7ee8dd0e39ae93a8fb8ff8e5303a356b081cdcc\",\"dweb:/ipfs/QmVBEei6aTnvYNZp2CHYVNKyZS4q1KkjANfY39WVXZXVoT\"]}},\"version\":1}",
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.23+commit.f704f362\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"InvalidNonce\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"InvalidShortString\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"str\",\"type\":\"string\"}],\"name\":\"StringTooLong\",\"type\":\"error\"},{\"anonymous\":false,\"inputs\":[],\"name\":\"EIP712DomainChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"oldNonce\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"newNonce\",\"type\":\"uint256\"}],\"name\":\"NonceIncreased\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"eip712Domain\",\"outputs\":[{\"internalType\":\"bytes1\",\"name\":\"fields\",\"type\":\"bytes1\"},{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"version\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"chainId\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"verifyingContract\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"salt\",\"type\":\"bytes32\"},{\"internalType\":\"uint256[]\",\"name\":\"extensions\",\"type\":\"uint256[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getAttestTypeHash\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getDomainSeparator\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getName\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"getNonce\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getRevokeTypeHash\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"newNonce\",\"type\":\"uint256\"}],\"name\":\"increaseNonce\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"events\":{\"EIP712DomainChanged()\":{\"details\":\"MAY be emitted to signal that the domain could have changed.\"},\"NonceIncreased(uint256,uint256)\":{\"params\":{\"newNonce\":\"The new value.\",\"oldNonce\":\"The previous nonce.\"}}},\"kind\":\"dev\",\"methods\":{\"constructor\":{\"details\":\"Creates a new EIP1271Verifier instance.\",\"params\":{\"version\":\"The current major version of the signing domain\"}},\"eip712Domain()\":{\"details\":\"See {IERC-5267}.\"},\"getAttestTypeHash()\":{\"returns\":{\"_0\":\"The EIP712 type hash for the attest function.\"}},\"getDomainSeparator()\":{\"returns\":{\"_0\":\"The domain separator used in the encoding of the signatures for attest, and revoke.\"}},\"getName()\":{\"returns\":{\"_0\":\"The EIP712 name.\"}},\"getNonce(address)\":{\"params\":{\"account\":\"The requested account.\"},\"returns\":{\"_0\":\"The current nonce.\"}},\"getRevokeTypeHash()\":{\"returns\":{\"_0\":\"The EIP712 type hash for the revoke function.\"}},\"increaseNonce(uint256)\":{\"params\":{\"newNonce\":\"The (higher) new value.\"}}},\"title\":\"EIP1271Verifier\",\"version\":1},\"userdoc\":{\"events\":{\"NonceIncreased(uint256,uint256)\":{\"notice\":\"Emitted when users invalidate nonces by increasing their nonces to (higher) new values.\"}},\"kind\":\"user\",\"methods\":{\"getAttestTypeHash()\":{\"notice\":\"Returns the EIP712 type hash for the attest function.\"},\"getDomainSeparator()\":{\"notice\":\"Returns the domain separator used in the encoding of the signatures for attest, and revoke.\"},\"getName()\":{\"notice\":\"Returns the EIP712 name.\"},\"getNonce(address)\":{\"notice\":\"Returns the current nonce per-account.\"},\"getRevokeTypeHash()\":{\"notice\":\"Returns the EIP712 type hash for the revoke function.\"},\"increaseNonce(uint256)\":{\"notice\":\"Provides users an option to invalidate nonces by increasing their nonces to (higher) new values.\"}},\"notice\":\"EIP1271Verifier typed signatures verifier for EAS delegated attestations.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"lib/eas-contracts/contracts/eip1271/EIP1271Verifier.sol\":\"EIP1271Verifier\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@ethereum-attestation-service/=lib/eas-contracts/\",\":@openzeppelin/=lib/openzeppelin-contracts/\",\":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":eas-contracts/=lib/eas-contracts/contracts/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\"]},\"sources\":{\"lib/eas-contracts/contracts/Common.sol\":{\"keccak256\":\"0x957bd2e6d0d6d637f86208b135c29fbaf4412cb08e5e7a61ede16b80561bf685\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://da1dc9aedbb1d4d39c46c2235918d3adfbc5741dd34a46010cf425d134e7936d\",\"dweb:/ipfs/QmWUk6bXnLaghS2riF3GTFEeURCzgYFMA5woa6AsgPwEgc\"]},\"lib/eas-contracts/contracts/IEAS.sol\":{\"keccak256\":\"0xd5a192f0bcee5372b69b0bb746c26317a2691dd10bfa52adbd08a9b723a55036\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ca836dd01016e7198a0b8e9e79d78512eb9db86dde6afd47f727f18d9a9c33a1\",\"dweb:/ipfs/QmXLTzcLUvA52qpVRUtVvj6L73cTmHk62jGsf6JErXFxD4\"]},\"lib/eas-contracts/contracts/ISchemaRegistry.sol\":{\"keccak256\":\"0x772b1ebcf3e5c93fecb53762e11bbdae75fcb667deea4ac21134fccfe78326e4\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://734ea6ab1e3bea7d8e0d478731c3b8888347ec01601d66d3072398b8984e8517\",\"dweb:/ipfs/QmQHZM7USiV88SUucWV7wwCpURv98dDngtFcsEaEnFwdtp\"]},\"lib/eas-contracts/contracts/eip1271/EIP1271Verifier.sol\":{\"keccak256\":\"0xf247d90a597407475003debeac796ad70e5af8d2dd722ede19d500474b72687a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://fdefcd2e83ae4257bea4c658f3d9f2c7a121788eac696a45a0fbb4f2218fbb39\",\"dweb:/ipfs/QmbSdLsRFukRE9Bt9hTvDLdZs28e8tYgKfFnKMpcNKWv7S\"]},\"lib/eas-contracts/contracts/resolver/ISchemaResolver.sol\":{\"keccak256\":\"0xb74b64e20b90b35004750d2c78ceb114a304975d22d71bd9a2a9de0d483f0395\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://0d0a30499e28e7c4ed62f2d8a88c46623c96830cc23e04ce6e9cd0cd0b11a03d\",\"dweb:/ipfs/QmYWNWu1cn7XDSaFgiMyn2L2coud3DNiGoNrNNo8QYcdyC\"]},\"lib/openzeppelin-contracts/contracts/interfaces/IERC1271.sol\":{\"keccak256\":\"0x85a45f3f10014a0f8be41157a32b6a5f905753ea64a4b64e29fc12b7deeecf39\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://c3c74009ce36136b36c77c23935b8e4a7b4f253be2da2be4fb4a916b1ce43743\",\"dweb:/ipfs/QmcH36v3iN7SJJuF73AunLR2LtNxhVJ1wm63ph4dPZ4pcL\"]},\"lib/openzeppelin-contracts/contracts/interfaces/IERC5267.sol\":{\"keccak256\":\"0x92aa1df62dc3d33f1656d63bede0923e0df0b706ad4137c8b10b0a8fe549fd92\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://c5c0f29195ad64cbe556da8e257dac8f05f78c53f90323c0d2accf8e6922d33a\",\"dweb:/ipfs/QmQ61TED8uaCZwcbh8KkgRSsCav7x7HbcGHwHts3U4DmUP\"]},\"lib/openzeppelin-contracts/contracts/utils/Address.sol\":{\"keccak256\":\"0xaf28a975a78550e45f65e559a3ad6a5ad43b9b8a37366999abd1b7084eb70721\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b7bd24e224f67f65bfadf85dc2929fa965456bb2415478bd0125471b5ce35245\",\"dweb:/ipfs/QmRaydGr8BTHs1kvaZfsNU69pKzUAGFrvABn1KiRSbE51y\"]},\"lib/openzeppelin-contracts/contracts/utils/ShortStrings.sol\":{\"keccak256\":\"0x18a7171df639a934592915a520ecb97c5bbc9675a1105607aac8a94e72bf62c6\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7478e1f13da69a2867ccd883001d836b75620362e743f196376d63ed0c422a1c\",\"dweb:/ipfs/QmWywcQ9TNfwtoqAxbn25d8C5VrV12PrPS9UjtGe6pL2BA\"]},\"lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol\":{\"keccak256\":\"0x32ba59b4b7299237c8ba56319110989d7978a039faf754793064e967e5894418\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://1ae50c8b562427df610cc4540c9bf104acca7ef8e2dcae567ae7e52272281e9c\",\"dweb:/ipfs/QmTHiadFCSJUPpRjNegc5SahmeU8bAoY8i9Aq6tVscbcKR\"]},\"lib/openzeppelin-contracts/contracts/utils/Strings.sol\":{\"keccak256\":\"0x55f102ea785d8399c0e58d1108e2d289506dde18abc6db1b7f68c1f9f9bc5792\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6e52e0a7765c943ef14e5bcf11e46e6139fa044be564881378349236bf2e3453\",\"dweb:/ipfs/QmZEeeXoFPW47amyP35gfzomF9DixqqTEPwzBakv6cZw6i\"]},\"lib/openzeppelin-contracts/contracts/utils/cryptography/ECDSA.sol\":{\"keccak256\":\"0xeed0a08b0b091f528356cbc7245891a4c748682d4f6a18055e8e6ca77d12a6cf\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ba80ba06c8e6be852847e4c5f4492cef801feb6558ae09ed705ff2e04ea8b13c\",\"dweb:/ipfs/QmXRJDv3xHLVQCVXg1ZvR35QS9sij5y9NDWYzMfUfAdTHF\"]},\"lib/openzeppelin-contracts/contracts/utils/cryptography/EIP712.sol\":{\"keccak256\":\"0x999f705a027ed6dc2d4e0df2cc4a509852c6bfd11de1c8161bf88832d0503fd0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://0798def67258d9a3cc20b2b4da7ebf351a5cefe0abfdd665d2d81f8e32f89b21\",\"dweb:/ipfs/QmPEvJosnPfzHNjKvCv2D3891mA2Ww8eUwkqrxBjuYdHCt\"]},\"lib/openzeppelin-contracts/contracts/utils/cryptography/MessageHashUtils.sol\":{\"keccak256\":\"0xba333517a3add42cd35fe877656fc3dfcc9de53baa4f3aabbd6d12a92e4ea435\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://2ceacff44c0fdc81e48e0e0b1db87a2076d3c1fb497341de077bf1da9f6b406c\",\"dweb:/ipfs/QmRUo1muMRAewxrKQ7TkXUtknyRoR57AyEkoPpiuZQ8FzX\"]},\"lib/openzeppelin-contracts/contracts/utils/cryptography/SignatureChecker.sol\":{\"keccak256\":\"0x6b11eb41a228cca35d4b662b4df69fcd75192851365102690f57b2ac01e83fe6\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ab006a2983ed350d2af21ddcdd835dcae3b8340086cc4d088460da5abd041f69\",\"dweb:/ipfs/QmbEacDhkJZiGrgzLjB4pNtE8Z1uudjDw1DvcDUTVQFsLG\"]},\"lib/openzeppelin-contracts/contracts/utils/math/Math.sol\":{\"keccak256\":\"0x005ec64c6313f0555d59e278f9a7a5ab2db5bdc72a027f255a37c327af1ec02d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4ece9f0b9c8daca08c76b6b5405a6446b6f73b3a15fab7ff56e296cbd4a2c875\",\"dweb:/ipfs/QmQyRpyPRL5SQuAgj6SHmbir3foX65FJjbVTTQrA2EFg6L\"]},\"lib/openzeppelin-contracts/contracts/utils/math/SignedMath.sol\":{\"keccak256\":\"0x5f7e4076e175393767754387c962926577f1660dd9b810187b9002407656be72\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7d533a1c97cd43a57cd9c465f7ee8dd0e39ae93a8fb8ff8e5303a356b081cdcc\",\"dweb:/ipfs/QmVBEei6aTnvYNZp2CHYVNKyZS4q1KkjANfY39WVXZXVoT\"]}},\"version\":1}",
   "metadata": {
     "compiler": {
-      "version": "0.8.21+commit.d9974bed"
+      "version": "0.8.23+commit.f704f362"
     },
     "language": "Solidity",
     "output": {
@@ -615,7 +615,7 @@
     "id": 2902,
     "exportedSymbols": {
       "Address": [
-        48508
+        48656
       ],
       "AttestationRequestData": [
         2041
@@ -633,7 +633,7 @@
         2901
       ],
       "EIP712": [
-        49687
+        49835
       ],
       "InvalidSignature": [
         17
@@ -648,7 +648,7 @@
         27
       ],
       "SignatureChecker": [
-        49862
+        50010
       ]
     },
     "nodeType": "SourceUnit",
@@ -675,7 +675,7 @@
         "file": "@openzeppelin/contracts/utils/cryptography/EIP712.sol",
         "nameLocation": "-1:-1:-1",
         "scope": 2902,
-        "sourceUnit": 49688,
+        "sourceUnit": 49836,
         "symbolAliases": [
           {
             "foreign": {
@@ -683,7 +683,7 @@
               "name": "EIP712",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 49687,
+              "referencedDeclaration": 49835,
               "src": "68:6:6",
               "typeDescriptions": {}
             },
@@ -701,7 +701,7 @@
         "file": "@openzeppelin/contracts/utils/cryptography/SignatureChecker.sol",
         "nameLocation": "-1:-1:-1",
         "scope": 2902,
-        "sourceUnit": 49863,
+        "sourceUnit": 50011,
         "symbolAliases": [
           {
             "foreign": {
@@ -709,7 +709,7 @@
               "name": "SignatureChecker",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 49862,
+              "referencedDeclaration": 50010,
               "src": "148:16:6",
               "typeDescriptions": {}
             },
@@ -727,7 +727,7 @@
         "file": "@openzeppelin/contracts/utils/Address.sol",
         "nameLocation": "-1:-1:-1",
         "scope": 2902,
-        "sourceUnit": 48509,
+        "sourceUnit": 48657,
         "symbolAliases": [
           {
             "foreign": {
@@ -735,7 +735,7 @@
               "name": "Address",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 48508,
+              "referencedDeclaration": 48656,
               "src": "248:7:6",
               "typeDescriptions": {}
             },
@@ -886,7 +886,7 @@
                 "747:7:6"
               ],
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 48508,
+              "referencedDeclaration": 48656,
               "src": "747:7:6"
             },
             "typeName": {
@@ -1263,7 +1263,7 @@
                     "2131:6:6"
                   ],
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 49687,
+                  "referencedDeclaration": 49835,
                   "src": "2131:6:6"
                 },
                 "nodeType": "ModifierInvocation",
@@ -1364,7 +1364,7 @@
                       "name": "_domainSeparatorV4",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 49583,
+                      "referencedDeclaration": 49731,
                       "src": "2475:18:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$__$returns$_t_bytes32_$",
@@ -3173,7 +3173,7 @@
                       "name": "_hashTypedDataV4",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 49620,
+                      "referencedDeclaration": 49768,
                       "src": "4345:16:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$_t_bytes32_$returns$_t_bytes32_$",
@@ -3417,10 +3417,10 @@
                           "name": "SignatureChecker",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 49862,
+                          "referencedDeclaration": 50010,
                           "src": "4900:16:6",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_type$_t_contract$_SignatureChecker_$49862_$",
+                            "typeIdentifier": "t_type$_t_contract$_SignatureChecker_$50010_$",
                             "typeString": "type(library SignatureChecker)"
                           }
                         },
@@ -3432,7 +3432,7 @@
                         "memberLocation": "4917:19:6",
                         "memberName": "isValidSignatureNow",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 49809,
+                        "referencedDeclaration": 49957,
                         "src": "4900:36:6",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_view$_t_address_$_t_bytes32_$_t_bytes_memory_ptr_$returns$_t_bool_$",
@@ -4318,7 +4318,7 @@
                       "name": "_hashTypedDataV4",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 49620,
+                      "referencedDeclaration": 49768,
                       "src": "5626:16:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$_t_bytes32_$returns$_t_bytes32_$",
@@ -4562,10 +4562,10 @@
                           "name": "SignatureChecker",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 49862,
+                          "referencedDeclaration": 50010,
                           "src": "6021:16:6",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_type$_t_contract$_SignatureChecker_$49862_$",
+                            "typeIdentifier": "t_type$_t_contract$_SignatureChecker_$50010_$",
                             "typeString": "type(library SignatureChecker)"
                           }
                         },
@@ -4577,7 +4577,7 @@
                         "memberLocation": "6038:19:6",
                         "memberName": "isValidSignatureNow",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 49809,
+                        "referencedDeclaration": 49957,
                         "src": "6021:36:6",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_view$_t_address_$_t_bytes32_$_t_bytes_memory_ptr_$returns$_t_bool_$",
@@ -4878,7 +4878,7 @@
                 "728:6:6"
               ],
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 49687,
+              "referencedDeclaration": 49835,
               "src": "728:6:6"
             },
             "id": 2588,
@@ -4898,20 +4898,20 @@
         "fullyImplemented": true,
         "linearizedBaseContracts": [
           2901,
-          49687,
-          46816
+          49835,
+          46964
         ],
         "name": "EIP1271Verifier",
         "nameLocation": "709:15:6",
         "scope": 2902,
         "usedErrors": [
           2593,
-          48544,
-          48546
+          48692,
+          48694
         ],
         "usedEvents": [
           2612,
-          46796
+          46944
         ]
       }
     ],

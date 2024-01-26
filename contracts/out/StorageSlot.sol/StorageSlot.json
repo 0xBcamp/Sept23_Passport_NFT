@@ -1,20 +1,20 @@
 {
   "abi": [],
   "bytecode": {
-    "object": "0x60566037600b82828239805160001a607314602a57634e487b7160e01b600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea26469706673582212208972bad68c3b2556660778c15a503061e70dfaa123a5da4875cbd50ff140419e64736f6c63430008150033",
-    "sourceMap": "1245:2685:42:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;1245:2685:42;;;;;;;;;;;;;;;;;",
+    "object": "0x60566037600b82828239805160001a607314602a57634e487b7160e01b600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea264697066735822122035ea107911fba2e1d7d036de7f2316f82b7e79afebe3801bb951acbb4cee206264736f6c63430008170033",
+    "sourceMap": "1245:2685:43:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;1245:2685:43;;;;;;;;;;;;;;;;;",
     "linkReferences": {}
   },
   "deployedBytecode": {
-    "object": "0x73000000000000000000000000000000000000000030146080604052600080fdfea26469706673582212208972bad68c3b2556660778c15a503061e70dfaa123a5da4875cbd50ff140419e64736f6c63430008150033",
-    "sourceMap": "1245:2685:42:-:0;;;;;;;;",
+    "object": "0x73000000000000000000000000000000000000000030146080604052600080fdfea264697066735822122035ea107911fba2e1d7d036de7f2316f82b7e79afebe3801bb951acbb4cee206264736f6c63430008170033",
+    "sourceMap": "1245:2685:43:-:0;;;;;;;;",
     "linkReferences": {}
   },
   "methodIdentifiers": {},
-  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"details\":\"Library for reading and writing primitive types to specific storage slots. Storage slots are often used to avoid storage conflict when dealing with upgradeable contracts. This library helps with reading and writing to such slots without the need for inline assembly. The functions in this library return Slot structs that contain a `value` member that can be used to read or write. Example usage to set ERC1967 implementation slot: ```solidity contract ERC1967 {     bytes32 internal constant _IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc;     function _getImplementation() internal view returns (address) {         return StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value;     }     function _setImplementation(address newImplementation) internal {         require(newImplementation.code.length > 0);         StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation;     } } ```\",\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol\":\"StorageSlot\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@ethereum-attestation-service/=lib/eas-contracts/\",\":@openzeppelin/=lib/openzeppelin-contracts/\",\":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":eas-contracts/=lib/eas-contracts/contracts/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\"]},\"sources\":{\"lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol\":{\"keccak256\":\"0x32ba59b4b7299237c8ba56319110989d7978a039faf754793064e967e5894418\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://1ae50c8b562427df610cc4540c9bf104acca7ef8e2dcae567ae7e52272281e9c\",\"dweb:/ipfs/QmTHiadFCSJUPpRjNegc5SahmeU8bAoY8i9Aq6tVscbcKR\"]}},\"version\":1}",
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.23+commit.f704f362\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"details\":\"Library for reading and writing primitive types to specific storage slots. Storage slots are often used to avoid storage conflict when dealing with upgradeable contracts. This library helps with reading and writing to such slots without the need for inline assembly. The functions in this library return Slot structs that contain a `value` member that can be used to read or write. Example usage to set ERC1967 implementation slot: ```solidity contract ERC1967 {     bytes32 internal constant _IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc;     function _getImplementation() internal view returns (address) {         return StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value;     }     function _setImplementation(address newImplementation) internal {         require(newImplementation.code.length > 0);         StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation;     } } ```\",\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol\":\"StorageSlot\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@ethereum-attestation-service/=lib/eas-contracts/\",\":@openzeppelin/=lib/openzeppelin-contracts/\",\":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":eas-contracts/=lib/eas-contracts/contracts/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\"]},\"sources\":{\"lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol\":{\"keccak256\":\"0x32ba59b4b7299237c8ba56319110989d7978a039faf754793064e967e5894418\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://1ae50c8b562427df610cc4540c9bf104acca7ef8e2dcae567ae7e52272281e9c\",\"dweb:/ipfs/QmTHiadFCSJUPpRjNegc5SahmeU8bAoY8i9Aq6tVscbcKR\"]}},\"version\":1}",
   "metadata": {
     "compiler": {
-      "version": "0.8.21+commit.d9974bed"
+      "version": "0.8.23+commit.f704f362"
     },
     "language": "Solidity",
     "output": {
@@ -67,19 +67,19 @@
   },
   "ast": {
     "absolutePath": "lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol",
-    "id": 48858,
+    "id": 49006,
     "exportedSymbols": {
       "StorageSlot": [
-        48857
+        49005
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "193:3738:42",
+    "src": "193:3738:43",
     "nodes": [
       {
-        "id": 48749,
+        "id": 48897,
         "nodeType": "PragmaDirective",
-        "src": "193:24:42",
+        "src": "193:24:43",
         "nodes": [],
         "literals": [
           "solidity",
@@ -89,26 +89,26 @@
         ]
       },
       {
-        "id": 48857,
+        "id": 49005,
         "nodeType": "ContractDefinition",
-        "src": "1245:2685:42",
+        "src": "1245:2685:43",
         "nodes": [
           {
-            "id": 48753,
+            "id": 48901,
             "nodeType": "StructDefinition",
-            "src": "1271:49:42",
+            "src": "1271:49:43",
             "nodes": [],
             "canonicalName": "StorageSlot.AddressSlot",
             "members": [
               {
                 "constant": false,
-                "id": 48752,
+                "id": 48900,
                 "mutability": "mutable",
                 "name": "value",
-                "nameLocation": "1308:5:42",
+                "nameLocation": "1308:5:43",
                 "nodeType": "VariableDeclaration",
-                "scope": 48753,
-                "src": "1300:13:42",
+                "scope": 48901,
+                "src": "1300:13:43",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -116,10 +116,10 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 48751,
+                  "id": 48899,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
-                  "src": "1300:7:42",
+                  "src": "1300:7:43",
                   "stateMutability": "nonpayable",
                   "typeDescriptions": {
                     "typeIdentifier": "t_address",
@@ -130,26 +130,26 @@
               }
             ],
             "name": "AddressSlot",
-            "nameLocation": "1278:11:42",
-            "scope": 48857,
+            "nameLocation": "1278:11:43",
+            "scope": 49005,
             "visibility": "public"
           },
           {
-            "id": 48756,
+            "id": 48904,
             "nodeType": "StructDefinition",
-            "src": "1326:46:42",
+            "src": "1326:46:43",
             "nodes": [],
             "canonicalName": "StorageSlot.BooleanSlot",
             "members": [
               {
                 "constant": false,
-                "id": 48755,
+                "id": 48903,
                 "mutability": "mutable",
                 "name": "value",
-                "nameLocation": "1360:5:42",
+                "nameLocation": "1360:5:43",
                 "nodeType": "VariableDeclaration",
-                "scope": 48756,
-                "src": "1355:10:42",
+                "scope": 48904,
+                "src": "1355:10:43",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -157,10 +157,10 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 48754,
+                  "id": 48902,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
-                  "src": "1355:4:42",
+                  "src": "1355:4:43",
                   "typeDescriptions": {
                     "typeIdentifier": "t_bool",
                     "typeString": "bool"
@@ -170,26 +170,26 @@
               }
             ],
             "name": "BooleanSlot",
-            "nameLocation": "1333:11:42",
-            "scope": 48857,
+            "nameLocation": "1333:11:43",
+            "scope": 49005,
             "visibility": "public"
           },
           {
-            "id": 48759,
+            "id": 48907,
             "nodeType": "StructDefinition",
-            "src": "1378:49:42",
+            "src": "1378:49:43",
             "nodes": [],
             "canonicalName": "StorageSlot.Bytes32Slot",
             "members": [
               {
                 "constant": false,
-                "id": 48758,
+                "id": 48906,
                 "mutability": "mutable",
                 "name": "value",
-                "nameLocation": "1415:5:42",
+                "nameLocation": "1415:5:43",
                 "nodeType": "VariableDeclaration",
-                "scope": 48759,
-                "src": "1407:13:42",
+                "scope": 48907,
+                "src": "1407:13:43",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -197,10 +197,10 @@
                   "typeString": "bytes32"
                 },
                 "typeName": {
-                  "id": 48757,
+                  "id": 48905,
                   "name": "bytes32",
                   "nodeType": "ElementaryTypeName",
-                  "src": "1407:7:42",
+                  "src": "1407:7:43",
                   "typeDescriptions": {
                     "typeIdentifier": "t_bytes32",
                     "typeString": "bytes32"
@@ -210,26 +210,26 @@
               }
             ],
             "name": "Bytes32Slot",
-            "nameLocation": "1385:11:42",
-            "scope": 48857,
+            "nameLocation": "1385:11:43",
+            "scope": 49005,
             "visibility": "public"
           },
           {
-            "id": 48762,
+            "id": 48910,
             "nodeType": "StructDefinition",
-            "src": "1433:49:42",
+            "src": "1433:49:43",
             "nodes": [],
             "canonicalName": "StorageSlot.Uint256Slot",
             "members": [
               {
                 "constant": false,
-                "id": 48761,
+                "id": 48909,
                 "mutability": "mutable",
                 "name": "value",
-                "nameLocation": "1470:5:42",
+                "nameLocation": "1470:5:43",
                 "nodeType": "VariableDeclaration",
-                "scope": 48762,
-                "src": "1462:13:42",
+                "scope": 48910,
+                "src": "1462:13:43",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -237,10 +237,10 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 48760,
+                  "id": 48908,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
-                  "src": "1462:7:42",
+                  "src": "1462:7:43",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -250,26 +250,26 @@
               }
             ],
             "name": "Uint256Slot",
-            "nameLocation": "1440:11:42",
-            "scope": 48857,
+            "nameLocation": "1440:11:43",
+            "scope": 49005,
             "visibility": "public"
           },
           {
-            "id": 48765,
+            "id": 48913,
             "nodeType": "StructDefinition",
-            "src": "1488:47:42",
+            "src": "1488:47:43",
             "nodes": [],
             "canonicalName": "StorageSlot.StringSlot",
             "members": [
               {
                 "constant": false,
-                "id": 48764,
+                "id": 48912,
                 "mutability": "mutable",
                 "name": "value",
-                "nameLocation": "1523:5:42",
+                "nameLocation": "1523:5:43",
                 "nodeType": "VariableDeclaration",
-                "scope": 48765,
-                "src": "1516:12:42",
+                "scope": 48913,
+                "src": "1516:12:43",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -277,10 +277,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 48763,
+                  "id": 48911,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "1516:6:42",
+                  "src": "1516:6:43",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -290,26 +290,26 @@
               }
             ],
             "name": "StringSlot",
-            "nameLocation": "1495:10:42",
-            "scope": 48857,
+            "nameLocation": "1495:10:43",
+            "scope": 49005,
             "visibility": "public"
           },
           {
-            "id": 48768,
+            "id": 48916,
             "nodeType": "StructDefinition",
-            "src": "1541:45:42",
+            "src": "1541:45:43",
             "nodes": [],
             "canonicalName": "StorageSlot.BytesSlot",
             "members": [
               {
                 "constant": false,
-                "id": 48767,
+                "id": 48915,
                 "mutability": "mutable",
                 "name": "value",
-                "nameLocation": "1574:5:42",
+                "nameLocation": "1574:5:43",
                 "nodeType": "VariableDeclaration",
-                "scope": 48768,
-                "src": "1568:11:42",
+                "scope": 48916,
+                "src": "1568:11:43",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -317,10 +317,10 @@
                   "typeString": "bytes"
                 },
                 "typeName": {
-                  "id": 48766,
+                  "id": 48914,
                   "name": "bytes",
                   "nodeType": "ElementaryTypeName",
-                  "src": "1568:5:42",
+                  "src": "1568:5:43",
                   "typeDescriptions": {
                     "typeIdentifier": "t_bytes_storage_ptr",
                     "typeString": "bytes"
@@ -330,43 +330,43 @@
               }
             ],
             "name": "BytesSlot",
-            "nameLocation": "1548:9:42",
-            "scope": 48857,
+            "nameLocation": "1548:9:43",
+            "scope": 49005,
             "visibility": "public"
           },
           {
-            "id": 48779,
+            "id": 48927,
             "nodeType": "FunctionDefinition",
-            "src": "1684:190:42",
+            "src": "1684:190:43",
             "nodes": [],
             "body": {
-              "id": 48778,
+              "id": 48926,
               "nodeType": "Block",
-              "src": "1768:106:42",
+              "src": "1768:106:43",
               "nodes": [],
               "statements": [
                 {
                   "AST": {
-                    "nativeSrc": "1830:38:42",
+                    "nativeSrc": "1830:38:43",
                     "nodeType": "YulBlock",
-                    "src": "1830:38:42",
+                    "src": "1830:38:43",
                     "statements": [
                       {
-                        "nativeSrc": "1844:14:42",
+                        "nativeSrc": "1844:14:43",
                         "nodeType": "YulAssignment",
-                        "src": "1844:14:42",
+                        "src": "1844:14:43",
                         "value": {
                           "name": "slot",
-                          "nativeSrc": "1854:4:42",
+                          "nativeSrc": "1854:4:43",
                           "nodeType": "YulIdentifier",
-                          "src": "1854:4:42"
+                          "src": "1854:4:43"
                         },
                         "variableNames": [
                           {
                             "name": "r.slot",
-                            "nativeSrc": "1844:6:42",
+                            "nativeSrc": "1844:6:43",
                             "nodeType": "YulIdentifier",
-                            "src": "1844:6:42"
+                            "src": "1844:6:43"
                           }
                         ]
                       }
@@ -376,51 +376,51 @@
                   "evmVersion": "paris",
                   "externalReferences": [
                     {
-                      "declaration": 48775,
+                      "declaration": 48923,
                       "isOffset": false,
                       "isSlot": true,
-                      "src": "1844:6:42",
+                      "src": "1844:6:43",
                       "suffix": "slot",
                       "valueSize": 1
                     },
                     {
-                      "declaration": 48771,
+                      "declaration": 48919,
                       "isOffset": false,
                       "isSlot": false,
-                      "src": "1854:4:42",
+                      "src": "1854:4:43",
                       "valueSize": 1
                     }
                   ],
-                  "id": 48777,
+                  "id": 48925,
                   "nodeType": "InlineAssembly",
-                  "src": "1821:47:42"
+                  "src": "1821:47:43"
                 }
               ]
             },
             "documentation": {
-              "id": 48769,
+              "id": 48917,
               "nodeType": "StructuredDocumentation",
-              "src": "1592:87:42",
+              "src": "1592:87:43",
               "text": " @dev Returns an `AddressSlot` with member `value` located at `slot`."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getAddressSlot",
-            "nameLocation": "1693:14:42",
+            "nameLocation": "1693:14:43",
             "parameters": {
-              "id": 48772,
+              "id": 48920,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 48771,
+                  "id": 48919,
                   "mutability": "mutable",
                   "name": "slot",
-                  "nameLocation": "1716:4:42",
+                  "nameLocation": "1716:4:43",
                   "nodeType": "VariableDeclaration",
-                  "scope": 48779,
-                  "src": "1708:12:42",
+                  "scope": 48927,
+                  "src": "1708:12:43",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -428,10 +428,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 48770,
+                    "id": 48918,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1708:7:42",
+                    "src": "1708:7:43",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -440,90 +440,90 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1707:14:42"
+              "src": "1707:14:43"
             },
             "returnParameters": {
-              "id": 48776,
+              "id": 48924,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 48775,
+                  "id": 48923,
                   "mutability": "mutable",
                   "name": "r",
-                  "nameLocation": "1765:1:42",
+                  "nameLocation": "1765:1:43",
                   "nodeType": "VariableDeclaration",
-                  "scope": 48779,
-                  "src": "1745:21:42",
+                  "scope": 48927,
+                  "src": "1745:21:43",
                   "stateVariable": false,
                   "storageLocation": "storage",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_AddressSlot_$48753_storage_ptr",
+                    "typeIdentifier": "t_struct$_AddressSlot_$48901_storage_ptr",
                     "typeString": "struct StorageSlot.AddressSlot"
                   },
                   "typeName": {
-                    "id": 48774,
+                    "id": 48922,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 48773,
+                      "id": 48921,
                       "name": "AddressSlot",
                       "nameLocations": [
-                        "1745:11:42"
+                        "1745:11:43"
                       ],
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 48753,
-                      "src": "1745:11:42"
+                      "referencedDeclaration": 48901,
+                      "src": "1745:11:43"
                     },
-                    "referencedDeclaration": 48753,
-                    "src": "1745:11:42",
+                    "referencedDeclaration": 48901,
+                    "src": "1745:11:43",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_AddressSlot_$48753_storage_ptr",
+                      "typeIdentifier": "t_struct$_AddressSlot_$48901_storage_ptr",
                       "typeString": "struct StorageSlot.AddressSlot"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-              "src": "1744:23:42"
+              "src": "1744:23:43"
             },
-            "scope": 48857,
+            "scope": 49005,
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 48790,
+            "id": 48938,
             "nodeType": "FunctionDefinition",
-            "src": "1972:190:42",
+            "src": "1972:190:43",
             "nodes": [],
             "body": {
-              "id": 48789,
+              "id": 48937,
               "nodeType": "Block",
-              "src": "2056:106:42",
+              "src": "2056:106:43",
               "nodes": [],
               "statements": [
                 {
                   "AST": {
-                    "nativeSrc": "2118:38:42",
+                    "nativeSrc": "2118:38:43",
                     "nodeType": "YulBlock",
-                    "src": "2118:38:42",
+                    "src": "2118:38:43",
                     "statements": [
                       {
-                        "nativeSrc": "2132:14:42",
+                        "nativeSrc": "2132:14:43",
                         "nodeType": "YulAssignment",
-                        "src": "2132:14:42",
+                        "src": "2132:14:43",
                         "value": {
                           "name": "slot",
-                          "nativeSrc": "2142:4:42",
+                          "nativeSrc": "2142:4:43",
                           "nodeType": "YulIdentifier",
-                          "src": "2142:4:42"
+                          "src": "2142:4:43"
                         },
                         "variableNames": [
                           {
                             "name": "r.slot",
-                            "nativeSrc": "2132:6:42",
+                            "nativeSrc": "2132:6:43",
                             "nodeType": "YulIdentifier",
-                            "src": "2132:6:42"
+                            "src": "2132:6:43"
                           }
                         ]
                       }
@@ -533,51 +533,51 @@
                   "evmVersion": "paris",
                   "externalReferences": [
                     {
-                      "declaration": 48786,
+                      "declaration": 48934,
                       "isOffset": false,
                       "isSlot": true,
-                      "src": "2132:6:42",
+                      "src": "2132:6:43",
                       "suffix": "slot",
                       "valueSize": 1
                     },
                     {
-                      "declaration": 48782,
+                      "declaration": 48930,
                       "isOffset": false,
                       "isSlot": false,
-                      "src": "2142:4:42",
+                      "src": "2142:4:43",
                       "valueSize": 1
                     }
                   ],
-                  "id": 48788,
+                  "id": 48936,
                   "nodeType": "InlineAssembly",
-                  "src": "2109:47:42"
+                  "src": "2109:47:43"
                 }
               ]
             },
             "documentation": {
-              "id": 48780,
+              "id": 48928,
               "nodeType": "StructuredDocumentation",
-              "src": "1880:87:42",
+              "src": "1880:87:43",
               "text": " @dev Returns an `BooleanSlot` with member `value` located at `slot`."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getBooleanSlot",
-            "nameLocation": "1981:14:42",
+            "nameLocation": "1981:14:43",
             "parameters": {
-              "id": 48783,
+              "id": 48931,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 48782,
+                  "id": 48930,
                   "mutability": "mutable",
                   "name": "slot",
-                  "nameLocation": "2004:4:42",
+                  "nameLocation": "2004:4:43",
                   "nodeType": "VariableDeclaration",
-                  "scope": 48790,
-                  "src": "1996:12:42",
+                  "scope": 48938,
+                  "src": "1996:12:43",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -585,10 +585,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 48781,
+                    "id": 48929,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1996:7:42",
+                    "src": "1996:7:43",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -597,90 +597,90 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1995:14:42"
+              "src": "1995:14:43"
             },
             "returnParameters": {
-              "id": 48787,
+              "id": 48935,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 48786,
+                  "id": 48934,
                   "mutability": "mutable",
                   "name": "r",
-                  "nameLocation": "2053:1:42",
+                  "nameLocation": "2053:1:43",
                   "nodeType": "VariableDeclaration",
-                  "scope": 48790,
-                  "src": "2033:21:42",
+                  "scope": 48938,
+                  "src": "2033:21:43",
                   "stateVariable": false,
                   "storageLocation": "storage",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_BooleanSlot_$48756_storage_ptr",
+                    "typeIdentifier": "t_struct$_BooleanSlot_$48904_storage_ptr",
                     "typeString": "struct StorageSlot.BooleanSlot"
                   },
                   "typeName": {
-                    "id": 48785,
+                    "id": 48933,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 48784,
+                      "id": 48932,
                       "name": "BooleanSlot",
                       "nameLocations": [
-                        "2033:11:42"
+                        "2033:11:43"
                       ],
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 48756,
-                      "src": "2033:11:42"
+                      "referencedDeclaration": 48904,
+                      "src": "2033:11:43"
                     },
-                    "referencedDeclaration": 48756,
-                    "src": "2033:11:42",
+                    "referencedDeclaration": 48904,
+                    "src": "2033:11:43",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_BooleanSlot_$48756_storage_ptr",
+                      "typeIdentifier": "t_struct$_BooleanSlot_$48904_storage_ptr",
                       "typeString": "struct StorageSlot.BooleanSlot"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-              "src": "2032:23:42"
+              "src": "2032:23:43"
             },
-            "scope": 48857,
+            "scope": 49005,
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 48801,
+            "id": 48949,
             "nodeType": "FunctionDefinition",
-            "src": "2260:190:42",
+            "src": "2260:190:43",
             "nodes": [],
             "body": {
-              "id": 48800,
+              "id": 48948,
               "nodeType": "Block",
-              "src": "2344:106:42",
+              "src": "2344:106:43",
               "nodes": [],
               "statements": [
                 {
                   "AST": {
-                    "nativeSrc": "2406:38:42",
+                    "nativeSrc": "2406:38:43",
                     "nodeType": "YulBlock",
-                    "src": "2406:38:42",
+                    "src": "2406:38:43",
                     "statements": [
                       {
-                        "nativeSrc": "2420:14:42",
+                        "nativeSrc": "2420:14:43",
                         "nodeType": "YulAssignment",
-                        "src": "2420:14:42",
+                        "src": "2420:14:43",
                         "value": {
                           "name": "slot",
-                          "nativeSrc": "2430:4:42",
+                          "nativeSrc": "2430:4:43",
                           "nodeType": "YulIdentifier",
-                          "src": "2430:4:42"
+                          "src": "2430:4:43"
                         },
                         "variableNames": [
                           {
                             "name": "r.slot",
-                            "nativeSrc": "2420:6:42",
+                            "nativeSrc": "2420:6:43",
                             "nodeType": "YulIdentifier",
-                            "src": "2420:6:42"
+                            "src": "2420:6:43"
                           }
                         ]
                       }
@@ -690,51 +690,51 @@
                   "evmVersion": "paris",
                   "externalReferences": [
                     {
-                      "declaration": 48797,
+                      "declaration": 48945,
                       "isOffset": false,
                       "isSlot": true,
-                      "src": "2420:6:42",
+                      "src": "2420:6:43",
                       "suffix": "slot",
                       "valueSize": 1
                     },
                     {
-                      "declaration": 48793,
+                      "declaration": 48941,
                       "isOffset": false,
                       "isSlot": false,
-                      "src": "2430:4:42",
+                      "src": "2430:4:43",
                       "valueSize": 1
                     }
                   ],
-                  "id": 48799,
+                  "id": 48947,
                   "nodeType": "InlineAssembly",
-                  "src": "2397:47:42"
+                  "src": "2397:47:43"
                 }
               ]
             },
             "documentation": {
-              "id": 48791,
+              "id": 48939,
               "nodeType": "StructuredDocumentation",
-              "src": "2168:87:42",
+              "src": "2168:87:43",
               "text": " @dev Returns an `Bytes32Slot` with member `value` located at `slot`."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getBytes32Slot",
-            "nameLocation": "2269:14:42",
+            "nameLocation": "2269:14:43",
             "parameters": {
-              "id": 48794,
+              "id": 48942,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 48793,
+                  "id": 48941,
                   "mutability": "mutable",
                   "name": "slot",
-                  "nameLocation": "2292:4:42",
+                  "nameLocation": "2292:4:43",
                   "nodeType": "VariableDeclaration",
-                  "scope": 48801,
-                  "src": "2284:12:42",
+                  "scope": 48949,
+                  "src": "2284:12:43",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -742,10 +742,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 48792,
+                    "id": 48940,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2284:7:42",
+                    "src": "2284:7:43",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -754,90 +754,90 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "2283:14:42"
+              "src": "2283:14:43"
             },
             "returnParameters": {
-              "id": 48798,
+              "id": 48946,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 48797,
+                  "id": 48945,
                   "mutability": "mutable",
                   "name": "r",
-                  "nameLocation": "2341:1:42",
+                  "nameLocation": "2341:1:43",
                   "nodeType": "VariableDeclaration",
-                  "scope": 48801,
-                  "src": "2321:21:42",
+                  "scope": 48949,
+                  "src": "2321:21:43",
                   "stateVariable": false,
                   "storageLocation": "storage",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_Bytes32Slot_$48759_storage_ptr",
+                    "typeIdentifier": "t_struct$_Bytes32Slot_$48907_storage_ptr",
                     "typeString": "struct StorageSlot.Bytes32Slot"
                   },
                   "typeName": {
-                    "id": 48796,
+                    "id": 48944,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 48795,
+                      "id": 48943,
                       "name": "Bytes32Slot",
                       "nameLocations": [
-                        "2321:11:42"
+                        "2321:11:43"
                       ],
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 48759,
-                      "src": "2321:11:42"
+                      "referencedDeclaration": 48907,
+                      "src": "2321:11:43"
                     },
-                    "referencedDeclaration": 48759,
-                    "src": "2321:11:42",
+                    "referencedDeclaration": 48907,
+                    "src": "2321:11:43",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_Bytes32Slot_$48759_storage_ptr",
+                      "typeIdentifier": "t_struct$_Bytes32Slot_$48907_storage_ptr",
                       "typeString": "struct StorageSlot.Bytes32Slot"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-              "src": "2320:23:42"
+              "src": "2320:23:43"
             },
-            "scope": 48857,
+            "scope": 49005,
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 48812,
+            "id": 48960,
             "nodeType": "FunctionDefinition",
-            "src": "2548:190:42",
+            "src": "2548:190:43",
             "nodes": [],
             "body": {
-              "id": 48811,
+              "id": 48959,
               "nodeType": "Block",
-              "src": "2632:106:42",
+              "src": "2632:106:43",
               "nodes": [],
               "statements": [
                 {
                   "AST": {
-                    "nativeSrc": "2694:38:42",
+                    "nativeSrc": "2694:38:43",
                     "nodeType": "YulBlock",
-                    "src": "2694:38:42",
+                    "src": "2694:38:43",
                     "statements": [
                       {
-                        "nativeSrc": "2708:14:42",
+                        "nativeSrc": "2708:14:43",
                         "nodeType": "YulAssignment",
-                        "src": "2708:14:42",
+                        "src": "2708:14:43",
                         "value": {
                           "name": "slot",
-                          "nativeSrc": "2718:4:42",
+                          "nativeSrc": "2718:4:43",
                           "nodeType": "YulIdentifier",
-                          "src": "2718:4:42"
+                          "src": "2718:4:43"
                         },
                         "variableNames": [
                           {
                             "name": "r.slot",
-                            "nativeSrc": "2708:6:42",
+                            "nativeSrc": "2708:6:43",
                             "nodeType": "YulIdentifier",
-                            "src": "2708:6:42"
+                            "src": "2708:6:43"
                           }
                         ]
                       }
@@ -847,51 +847,51 @@
                   "evmVersion": "paris",
                   "externalReferences": [
                     {
-                      "declaration": 48808,
+                      "declaration": 48956,
                       "isOffset": false,
                       "isSlot": true,
-                      "src": "2708:6:42",
+                      "src": "2708:6:43",
                       "suffix": "slot",
                       "valueSize": 1
                     },
                     {
-                      "declaration": 48804,
+                      "declaration": 48952,
                       "isOffset": false,
                       "isSlot": false,
-                      "src": "2718:4:42",
+                      "src": "2718:4:43",
                       "valueSize": 1
                     }
                   ],
-                  "id": 48810,
+                  "id": 48958,
                   "nodeType": "InlineAssembly",
-                  "src": "2685:47:42"
+                  "src": "2685:47:43"
                 }
               ]
             },
             "documentation": {
-              "id": 48802,
+              "id": 48950,
               "nodeType": "StructuredDocumentation",
-              "src": "2456:87:42",
+              "src": "2456:87:43",
               "text": " @dev Returns an `Uint256Slot` with member `value` located at `slot`."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getUint256Slot",
-            "nameLocation": "2557:14:42",
+            "nameLocation": "2557:14:43",
             "parameters": {
-              "id": 48805,
+              "id": 48953,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 48804,
+                  "id": 48952,
                   "mutability": "mutable",
                   "name": "slot",
-                  "nameLocation": "2580:4:42",
+                  "nameLocation": "2580:4:43",
                   "nodeType": "VariableDeclaration",
-                  "scope": 48812,
-                  "src": "2572:12:42",
+                  "scope": 48960,
+                  "src": "2572:12:43",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -899,10 +899,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 48803,
+                    "id": 48951,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2572:7:42",
+                    "src": "2572:7:43",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -911,90 +911,90 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "2571:14:42"
+              "src": "2571:14:43"
             },
             "returnParameters": {
-              "id": 48809,
+              "id": 48957,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 48808,
+                  "id": 48956,
                   "mutability": "mutable",
                   "name": "r",
-                  "nameLocation": "2629:1:42",
+                  "nameLocation": "2629:1:43",
                   "nodeType": "VariableDeclaration",
-                  "scope": 48812,
-                  "src": "2609:21:42",
+                  "scope": 48960,
+                  "src": "2609:21:43",
                   "stateVariable": false,
                   "storageLocation": "storage",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_Uint256Slot_$48762_storage_ptr",
+                    "typeIdentifier": "t_struct$_Uint256Slot_$48910_storage_ptr",
                     "typeString": "struct StorageSlot.Uint256Slot"
                   },
                   "typeName": {
-                    "id": 48807,
+                    "id": 48955,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 48806,
+                      "id": 48954,
                       "name": "Uint256Slot",
                       "nameLocations": [
-                        "2609:11:42"
+                        "2609:11:43"
                       ],
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 48762,
-                      "src": "2609:11:42"
+                      "referencedDeclaration": 48910,
+                      "src": "2609:11:43"
                     },
-                    "referencedDeclaration": 48762,
-                    "src": "2609:11:42",
+                    "referencedDeclaration": 48910,
+                    "src": "2609:11:43",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_Uint256Slot_$48762_storage_ptr",
+                      "typeIdentifier": "t_struct$_Uint256Slot_$48910_storage_ptr",
                       "typeString": "struct StorageSlot.Uint256Slot"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-              "src": "2608:23:42"
+              "src": "2608:23:43"
             },
-            "scope": 48857,
+            "scope": 49005,
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 48823,
+            "id": 48971,
             "nodeType": "FunctionDefinition",
-            "src": "2835:188:42",
+            "src": "2835:188:43",
             "nodes": [],
             "body": {
-              "id": 48822,
+              "id": 48970,
               "nodeType": "Block",
-              "src": "2917:106:42",
+              "src": "2917:106:43",
               "nodes": [],
               "statements": [
                 {
                   "AST": {
-                    "nativeSrc": "2979:38:42",
+                    "nativeSrc": "2979:38:43",
                     "nodeType": "YulBlock",
-                    "src": "2979:38:42",
+                    "src": "2979:38:43",
                     "statements": [
                       {
-                        "nativeSrc": "2993:14:42",
+                        "nativeSrc": "2993:14:43",
                         "nodeType": "YulAssignment",
-                        "src": "2993:14:42",
+                        "src": "2993:14:43",
                         "value": {
                           "name": "slot",
-                          "nativeSrc": "3003:4:42",
+                          "nativeSrc": "3003:4:43",
                           "nodeType": "YulIdentifier",
-                          "src": "3003:4:42"
+                          "src": "3003:4:43"
                         },
                         "variableNames": [
                           {
                             "name": "r.slot",
-                            "nativeSrc": "2993:6:42",
+                            "nativeSrc": "2993:6:43",
                             "nodeType": "YulIdentifier",
-                            "src": "2993:6:42"
+                            "src": "2993:6:43"
                           }
                         ]
                       }
@@ -1004,51 +1004,51 @@
                   "evmVersion": "paris",
                   "externalReferences": [
                     {
-                      "declaration": 48819,
+                      "declaration": 48967,
                       "isOffset": false,
                       "isSlot": true,
-                      "src": "2993:6:42",
+                      "src": "2993:6:43",
                       "suffix": "slot",
                       "valueSize": 1
                     },
                     {
-                      "declaration": 48815,
+                      "declaration": 48963,
                       "isOffset": false,
                       "isSlot": false,
-                      "src": "3003:4:42",
+                      "src": "3003:4:43",
                       "valueSize": 1
                     }
                   ],
-                  "id": 48821,
+                  "id": 48969,
                   "nodeType": "InlineAssembly",
-                  "src": "2970:47:42"
+                  "src": "2970:47:43"
                 }
               ]
             },
             "documentation": {
-              "id": 48813,
+              "id": 48961,
               "nodeType": "StructuredDocumentation",
-              "src": "2744:86:42",
+              "src": "2744:86:43",
               "text": " @dev Returns an `StringSlot` with member `value` located at `slot`."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getStringSlot",
-            "nameLocation": "2844:13:42",
+            "nameLocation": "2844:13:43",
             "parameters": {
-              "id": 48816,
+              "id": 48964,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 48815,
+                  "id": 48963,
                   "mutability": "mutable",
                   "name": "slot",
-                  "nameLocation": "2866:4:42",
+                  "nameLocation": "2866:4:43",
                   "nodeType": "VariableDeclaration",
-                  "scope": 48823,
-                  "src": "2858:12:42",
+                  "scope": 48971,
+                  "src": "2858:12:43",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1056,10 +1056,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 48814,
+                    "id": 48962,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2858:7:42",
+                    "src": "2858:7:43",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -1068,90 +1068,90 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "2857:14:42"
+              "src": "2857:14:43"
             },
             "returnParameters": {
-              "id": 48820,
+              "id": 48968,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 48819,
+                  "id": 48967,
                   "mutability": "mutable",
                   "name": "r",
-                  "nameLocation": "2914:1:42",
+                  "nameLocation": "2914:1:43",
                   "nodeType": "VariableDeclaration",
-                  "scope": 48823,
-                  "src": "2895:20:42",
+                  "scope": 48971,
+                  "src": "2895:20:43",
                   "stateVariable": false,
                   "storageLocation": "storage",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_StringSlot_$48765_storage_ptr",
+                    "typeIdentifier": "t_struct$_StringSlot_$48913_storage_ptr",
                     "typeString": "struct StorageSlot.StringSlot"
                   },
                   "typeName": {
-                    "id": 48818,
+                    "id": 48966,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 48817,
+                      "id": 48965,
                       "name": "StringSlot",
                       "nameLocations": [
-                        "2895:10:42"
+                        "2895:10:43"
                       ],
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 48765,
-                      "src": "2895:10:42"
+                      "referencedDeclaration": 48913,
+                      "src": "2895:10:43"
                     },
-                    "referencedDeclaration": 48765,
-                    "src": "2895:10:42",
+                    "referencedDeclaration": 48913,
+                    "src": "2895:10:43",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_StringSlot_$48765_storage_ptr",
+                      "typeIdentifier": "t_struct$_StringSlot_$48913_storage_ptr",
                       "typeString": "struct StorageSlot.StringSlot"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-              "src": "2894:22:42"
+              "src": "2894:22:43"
             },
-            "scope": 48857,
+            "scope": 49005,
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 48834,
+            "id": 48982,
             "nodeType": "FunctionDefinition",
-            "src": "3135:202:42",
+            "src": "3135:202:43",
             "nodes": [],
             "body": {
-              "id": 48833,
+              "id": 48981,
               "nodeType": "Block",
-              "src": "3225:112:42",
+              "src": "3225:112:43",
               "nodes": [],
               "statements": [
                 {
                   "AST": {
-                    "nativeSrc": "3287:44:42",
+                    "nativeSrc": "3287:44:43",
                     "nodeType": "YulBlock",
-                    "src": "3287:44:42",
+                    "src": "3287:44:43",
                     "statements": [
                       {
-                        "nativeSrc": "3301:20:42",
+                        "nativeSrc": "3301:20:43",
                         "nodeType": "YulAssignment",
-                        "src": "3301:20:42",
+                        "src": "3301:20:43",
                         "value": {
                           "name": "store.slot",
-                          "nativeSrc": "3311:10:42",
+                          "nativeSrc": "3311:10:43",
                           "nodeType": "YulIdentifier",
-                          "src": "3311:10:42"
+                          "src": "3311:10:43"
                         },
                         "variableNames": [
                           {
                             "name": "r.slot",
-                            "nativeSrc": "3301:6:42",
+                            "nativeSrc": "3301:6:43",
                             "nodeType": "YulIdentifier",
-                            "src": "3301:6:42"
+                            "src": "3301:6:43"
                           }
                         ]
                       }
@@ -1161,52 +1161,52 @@
                   "evmVersion": "paris",
                   "externalReferences": [
                     {
-                      "declaration": 48830,
+                      "declaration": 48978,
                       "isOffset": false,
                       "isSlot": true,
-                      "src": "3301:6:42",
+                      "src": "3301:6:43",
                       "suffix": "slot",
                       "valueSize": 1
                     },
                     {
-                      "declaration": 48826,
+                      "declaration": 48974,
                       "isOffset": false,
                       "isSlot": true,
-                      "src": "3311:10:42",
+                      "src": "3311:10:43",
                       "suffix": "slot",
                       "valueSize": 1
                     }
                   ],
-                  "id": 48832,
+                  "id": 48980,
                   "nodeType": "InlineAssembly",
-                  "src": "3278:53:42"
+                  "src": "3278:53:43"
                 }
               ]
             },
             "documentation": {
-              "id": 48824,
+              "id": 48972,
               "nodeType": "StructuredDocumentation",
-              "src": "3029:101:42",
+              "src": "3029:101:43",
               "text": " @dev Returns an `StringSlot` representation of the string storage pointer `store`."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getStringSlot",
-            "nameLocation": "3144:13:42",
+            "nameLocation": "3144:13:43",
             "parameters": {
-              "id": 48827,
+              "id": 48975,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 48826,
+                  "id": 48974,
                   "mutability": "mutable",
                   "name": "store",
-                  "nameLocation": "3173:5:42",
+                  "nameLocation": "3173:5:43",
                   "nodeType": "VariableDeclaration",
-                  "scope": 48834,
-                  "src": "3158:20:42",
+                  "scope": 48982,
+                  "src": "3158:20:43",
                   "stateVariable": false,
                   "storageLocation": "storage",
                   "typeDescriptions": {
@@ -1214,10 +1214,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 48825,
+                    "id": 48973,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3158:6:42",
+                    "src": "3158:6:43",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -1226,90 +1226,90 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3157:22:42"
+              "src": "3157:22:43"
             },
             "returnParameters": {
-              "id": 48831,
+              "id": 48979,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 48830,
+                  "id": 48978,
                   "mutability": "mutable",
                   "name": "r",
-                  "nameLocation": "3222:1:42",
+                  "nameLocation": "3222:1:43",
                   "nodeType": "VariableDeclaration",
-                  "scope": 48834,
-                  "src": "3203:20:42",
+                  "scope": 48982,
+                  "src": "3203:20:43",
                   "stateVariable": false,
                   "storageLocation": "storage",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_StringSlot_$48765_storage_ptr",
+                    "typeIdentifier": "t_struct$_StringSlot_$48913_storage_ptr",
                     "typeString": "struct StorageSlot.StringSlot"
                   },
                   "typeName": {
-                    "id": 48829,
+                    "id": 48977,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 48828,
+                      "id": 48976,
                       "name": "StringSlot",
                       "nameLocations": [
-                        "3203:10:42"
+                        "3203:10:43"
                       ],
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 48765,
-                      "src": "3203:10:42"
+                      "referencedDeclaration": 48913,
+                      "src": "3203:10:43"
                     },
-                    "referencedDeclaration": 48765,
-                    "src": "3203:10:42",
+                    "referencedDeclaration": 48913,
+                    "src": "3203:10:43",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_StringSlot_$48765_storage_ptr",
+                      "typeIdentifier": "t_struct$_StringSlot_$48913_storage_ptr",
                       "typeString": "struct StorageSlot.StringSlot"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-              "src": "3202:22:42"
+              "src": "3202:22:43"
             },
-            "scope": 48857,
+            "scope": 49005,
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 48845,
+            "id": 48993,
             "nodeType": "FunctionDefinition",
-            "src": "3433:186:42",
+            "src": "3433:186:43",
             "nodes": [],
             "body": {
-              "id": 48844,
+              "id": 48992,
               "nodeType": "Block",
-              "src": "3513:106:42",
+              "src": "3513:106:43",
               "nodes": [],
               "statements": [
                 {
                   "AST": {
-                    "nativeSrc": "3575:38:42",
+                    "nativeSrc": "3575:38:43",
                     "nodeType": "YulBlock",
-                    "src": "3575:38:42",
+                    "src": "3575:38:43",
                     "statements": [
                       {
-                        "nativeSrc": "3589:14:42",
+                        "nativeSrc": "3589:14:43",
                         "nodeType": "YulAssignment",
-                        "src": "3589:14:42",
+                        "src": "3589:14:43",
                         "value": {
                           "name": "slot",
-                          "nativeSrc": "3599:4:42",
+                          "nativeSrc": "3599:4:43",
                           "nodeType": "YulIdentifier",
-                          "src": "3599:4:42"
+                          "src": "3599:4:43"
                         },
                         "variableNames": [
                           {
                             "name": "r.slot",
-                            "nativeSrc": "3589:6:42",
+                            "nativeSrc": "3589:6:43",
                             "nodeType": "YulIdentifier",
-                            "src": "3589:6:42"
+                            "src": "3589:6:43"
                           }
                         ]
                       }
@@ -1319,51 +1319,51 @@
                   "evmVersion": "paris",
                   "externalReferences": [
                     {
-                      "declaration": 48841,
+                      "declaration": 48989,
                       "isOffset": false,
                       "isSlot": true,
-                      "src": "3589:6:42",
+                      "src": "3589:6:43",
                       "suffix": "slot",
                       "valueSize": 1
                     },
                     {
-                      "declaration": 48837,
+                      "declaration": 48985,
                       "isOffset": false,
                       "isSlot": false,
-                      "src": "3599:4:42",
+                      "src": "3599:4:43",
                       "valueSize": 1
                     }
                   ],
-                  "id": 48843,
+                  "id": 48991,
                   "nodeType": "InlineAssembly",
-                  "src": "3566:47:42"
+                  "src": "3566:47:43"
                 }
               ]
             },
             "documentation": {
-              "id": 48835,
+              "id": 48983,
               "nodeType": "StructuredDocumentation",
-              "src": "3343:85:42",
+              "src": "3343:85:43",
               "text": " @dev Returns an `BytesSlot` with member `value` located at `slot`."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getBytesSlot",
-            "nameLocation": "3442:12:42",
+            "nameLocation": "3442:12:43",
             "parameters": {
-              "id": 48838,
+              "id": 48986,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 48837,
+                  "id": 48985,
                   "mutability": "mutable",
                   "name": "slot",
-                  "nameLocation": "3463:4:42",
+                  "nameLocation": "3463:4:43",
                   "nodeType": "VariableDeclaration",
-                  "scope": 48845,
-                  "src": "3455:12:42",
+                  "scope": 48993,
+                  "src": "3455:12:43",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1371,10 +1371,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 48836,
+                    "id": 48984,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3455:7:42",
+                    "src": "3455:7:43",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -1383,90 +1383,90 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3454:14:42"
+              "src": "3454:14:43"
             },
             "returnParameters": {
-              "id": 48842,
+              "id": 48990,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 48841,
+                  "id": 48989,
                   "mutability": "mutable",
                   "name": "r",
-                  "nameLocation": "3510:1:42",
+                  "nameLocation": "3510:1:43",
                   "nodeType": "VariableDeclaration",
-                  "scope": 48845,
-                  "src": "3492:19:42",
+                  "scope": 48993,
+                  "src": "3492:19:43",
                   "stateVariable": false,
                   "storageLocation": "storage",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_BytesSlot_$48768_storage_ptr",
+                    "typeIdentifier": "t_struct$_BytesSlot_$48916_storage_ptr",
                     "typeString": "struct StorageSlot.BytesSlot"
                   },
                   "typeName": {
-                    "id": 48840,
+                    "id": 48988,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 48839,
+                      "id": 48987,
                       "name": "BytesSlot",
                       "nameLocations": [
-                        "3492:9:42"
+                        "3492:9:43"
                       ],
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 48768,
-                      "src": "3492:9:42"
+                      "referencedDeclaration": 48916,
+                      "src": "3492:9:43"
                     },
-                    "referencedDeclaration": 48768,
-                    "src": "3492:9:42",
+                    "referencedDeclaration": 48916,
+                    "src": "3492:9:43",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_BytesSlot_$48768_storage_ptr",
+                      "typeIdentifier": "t_struct$_BytesSlot_$48916_storage_ptr",
                       "typeString": "struct StorageSlot.BytesSlot"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-              "src": "3491:21:42"
+              "src": "3491:21:43"
             },
-            "scope": 48857,
+            "scope": 49005,
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 48856,
+            "id": 49004,
             "nodeType": "FunctionDefinition",
-            "src": "3729:199:42",
+            "src": "3729:199:43",
             "nodes": [],
             "body": {
-              "id": 48855,
+              "id": 49003,
               "nodeType": "Block",
-              "src": "3816:112:42",
+              "src": "3816:112:43",
               "nodes": [],
               "statements": [
                 {
                   "AST": {
-                    "nativeSrc": "3878:44:42",
+                    "nativeSrc": "3878:44:43",
                     "nodeType": "YulBlock",
-                    "src": "3878:44:42",
+                    "src": "3878:44:43",
                     "statements": [
                       {
-                        "nativeSrc": "3892:20:42",
+                        "nativeSrc": "3892:20:43",
                         "nodeType": "YulAssignment",
-                        "src": "3892:20:42",
+                        "src": "3892:20:43",
                         "value": {
                           "name": "store.slot",
-                          "nativeSrc": "3902:10:42",
+                          "nativeSrc": "3902:10:43",
                           "nodeType": "YulIdentifier",
-                          "src": "3902:10:42"
+                          "src": "3902:10:43"
                         },
                         "variableNames": [
                           {
                             "name": "r.slot",
-                            "nativeSrc": "3892:6:42",
+                            "nativeSrc": "3892:6:43",
                             "nodeType": "YulIdentifier",
-                            "src": "3892:6:42"
+                            "src": "3892:6:43"
                           }
                         ]
                       }
@@ -1476,52 +1476,52 @@
                   "evmVersion": "paris",
                   "externalReferences": [
                     {
-                      "declaration": 48852,
+                      "declaration": 49000,
                       "isOffset": false,
                       "isSlot": true,
-                      "src": "3892:6:42",
+                      "src": "3892:6:43",
                       "suffix": "slot",
                       "valueSize": 1
                     },
                     {
-                      "declaration": 48848,
+                      "declaration": 48996,
                       "isOffset": false,
                       "isSlot": true,
-                      "src": "3902:10:42",
+                      "src": "3902:10:43",
                       "suffix": "slot",
                       "valueSize": 1
                     }
                   ],
-                  "id": 48854,
+                  "id": 49002,
                   "nodeType": "InlineAssembly",
-                  "src": "3869:53:42"
+                  "src": "3869:53:43"
                 }
               ]
             },
             "documentation": {
-              "id": 48846,
+              "id": 48994,
               "nodeType": "StructuredDocumentation",
-              "src": "3625:99:42",
+              "src": "3625:99:43",
               "text": " @dev Returns an `BytesSlot` representation of the bytes storage pointer `store`."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getBytesSlot",
-            "nameLocation": "3738:12:42",
+            "nameLocation": "3738:12:43",
             "parameters": {
-              "id": 48849,
+              "id": 48997,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 48848,
+                  "id": 48996,
                   "mutability": "mutable",
                   "name": "store",
-                  "nameLocation": "3765:5:42",
+                  "nameLocation": "3765:5:43",
                   "nodeType": "VariableDeclaration",
-                  "scope": 48856,
-                  "src": "3751:19:42",
+                  "scope": 49004,
+                  "src": "3751:19:43",
                   "stateVariable": false,
                   "storageLocation": "storage",
                   "typeDescriptions": {
@@ -1529,10 +1529,10 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 48847,
+                    "id": 48995,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3751:5:42",
+                    "src": "3751:5:43",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes_storage_ptr",
                       "typeString": "bytes"
@@ -1541,53 +1541,53 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3750:21:42"
+              "src": "3750:21:43"
             },
             "returnParameters": {
-              "id": 48853,
+              "id": 49001,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 48852,
+                  "id": 49000,
                   "mutability": "mutable",
                   "name": "r",
-                  "nameLocation": "3813:1:42",
+                  "nameLocation": "3813:1:43",
                   "nodeType": "VariableDeclaration",
-                  "scope": 48856,
-                  "src": "3795:19:42",
+                  "scope": 49004,
+                  "src": "3795:19:43",
                   "stateVariable": false,
                   "storageLocation": "storage",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_BytesSlot_$48768_storage_ptr",
+                    "typeIdentifier": "t_struct$_BytesSlot_$48916_storage_ptr",
                     "typeString": "struct StorageSlot.BytesSlot"
                   },
                   "typeName": {
-                    "id": 48851,
+                    "id": 48999,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 48850,
+                      "id": 48998,
                       "name": "BytesSlot",
                       "nameLocations": [
-                        "3795:9:42"
+                        "3795:9:43"
                       ],
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 48768,
-                      "src": "3795:9:42"
+                      "referencedDeclaration": 48916,
+                      "src": "3795:9:43"
                     },
-                    "referencedDeclaration": 48768,
-                    "src": "3795:9:42",
+                    "referencedDeclaration": 48916,
+                    "src": "3795:9:43",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_BytesSlot_$48768_storage_ptr",
+                      "typeIdentifier": "t_struct$_BytesSlot_$48916_storage_ptr",
                       "typeString": "struct StorageSlot.BytesSlot"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-              "src": "3794:21:42"
+              "src": "3794:21:43"
             },
-            "scope": 48857,
+            "scope": 49005,
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "internal"
@@ -1599,23 +1599,23 @@
         "contractDependencies": [],
         "contractKind": "library",
         "documentation": {
-          "id": 48750,
+          "id": 48898,
           "nodeType": "StructuredDocumentation",
-          "src": "219:1025:42",
+          "src": "219:1025:43",
           "text": " @dev Library for reading and writing primitive types to specific storage slots.\n Storage slots are often used to avoid storage conflict when dealing with upgradeable contracts.\n This library helps with reading and writing to such slots without the need for inline assembly.\n The functions in this library return Slot structs that contain a `value` member that can be used to read or write.\n Example usage to set ERC1967 implementation slot:\n ```solidity\n contract ERC1967 {\n     bytes32 internal constant _IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc;\n     function _getImplementation() internal view returns (address) {\n         return StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value;\n     }\n     function _setImplementation(address newImplementation) internal {\n         require(newImplementation.code.length > 0);\n         StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation;\n     }\n }\n ```"
         },
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          48857
+          49005
         ],
         "name": "StorageSlot",
-        "nameLocation": "1253:11:42",
-        "scope": 48858,
+        "nameLocation": "1253:11:43",
+        "scope": 49006,
         "usedErrors": [],
         "usedEvents": []
       }
     ],
     "license": "MIT"
   },
-  "id": 42
+  "id": 43
 }

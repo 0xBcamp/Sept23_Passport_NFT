@@ -1,1053 +1,1127 @@
-// 0xFCfb6F0Ea3c90a704Ff9C3a6a5E07C9a039e8b8a
-// https://sepolia.etherscan.io/address/0xfcfb6f0ea3c90a704ff9c3a6a5e07c9a039e8b8a#code
-// #1184
-// 0x32a6014fedc1de48e7ba2f24730228a21fb781abfc181ae91e0d22ec0455ddeb
+// 0x4Fe53000B1De1CF7b02800A3F539b26491E7A53B
+
+// #1305
+// 0x704ddf62a38cf398a044d09f4cb12b0cbbd57ac1f761dc50d526835081ce85d0
 
 const EAS_CONTRACT_ADDRESS = "0xC2679fBD37d54388Ce493F1DB75320D236e1815e";
 const PASSPORT_RESOLVER_CONTRACT_ADDRESS =
-  "0xFCfb6F0Ea3c90a704Ff9C3a6a5E07C9a039e8b8a";
+  "0x4Fe53000B1De1CF7b02800A3F539b26491E7A53B";
 const SCHEMA_UID =
-  "0x32a6014fedc1de48e7ba2f24730228a21fb781abfc181ae91e0d22ec0455ddeb";
+  "0x704ddf62a38cf398a044d09f4cb12b0cbbd57ac1f761dc50d526835081ce85d0";
 
 const PASSPORT_RESOLVER_ABI = [
   {
-    "inputs": [
+    inputs: [
       {
-        "internalType": "contract IEAS",
-        "name": "eas",
-        "type": "address",
+        internalType: "contract IEAS",
+        name: "eas",
+        type: "address",
       },
       {
-        "internalType": "address[]",
-        "name": "initialMembers",
-        "type": "address[]",
-      },
-    ],
-    "stateMutability": "nonpayable",
-    "type": "constructor",
-  },
-  {
-    "inputs": [],
-    "name": "AccessDenied",
-    "type": "error",
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "",
-        "type": "address",
+        internalType: "address[]",
+        name: "initialMembers",
+        type: "address[]",
       },
     ],
-    "name": "AlreadyAuthorized",
-    "type": "error",
+    stateMutability: "nonpayable",
+    type: "constructor",
   },
   {
-    "inputs": [
+    inputs: [],
+    name: "AccessDenied",
+    type: "error",
+  },
+  {
+    inputs: [
       {
-        "internalType": "address",
-        "name": "",
-        "type": "address",
+        internalType: "address",
+        name: "",
+        type: "address",
       },
     ],
-    "name": "AlreadyUnauthorized",
-    "type": "error",
+    name: "AlreadyAuthorized",
+    type: "error",
   },
   {
-    "inputs": [],
-    "name": "CannotAuthorizeZeroAddress",
-    "type": "error",
-  },
-  {
-    "inputs": [
+    inputs: [
       {
-        "internalType": "address",
-        "name": "sender",
-        "type": "address",
-      },
-      {
-        "internalType": "uint256",
-        "name": "tokenId",
-        "type": "uint256",
-      },
-      {
-        "internalType": "address",
-        "name": "owner",
-        "type": "address",
+        internalType: "address",
+        name: "",
+        type: "address",
       },
     ],
-    "name": "ERC721IncorrectOwner",
-    "type": "error",
+    name: "AlreadyUnauthorized",
+    type: "error",
   },
   {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "operator",
-        "type": "address",
-      },
-      {
-        "internalType": "uint256",
-        "name": "tokenId",
-        "type": "uint256",
-      },
-    ],
-    "name": "ERC721InsufficientApproval",
-    "type": "error",
+    inputs: [],
+    name: "CannotAuthorizeZeroAddress",
+    type: "error",
   },
   {
-    "inputs": [
+    inputs: [
       {
-        "internalType": "address",
-        "name": "approver",
-        "type": "address",
+        internalType: "address",
+        name: "sender",
+        type: "address",
       },
-    ],
-    "name": "ERC721InvalidApprover",
-    "type": "error",
-  },
-  {
-    "inputs": [
       {
-        "internalType": "address",
-        "name": "operator",
-        "type": "address",
+        internalType: "uint256",
+        name: "tokenId",
+        type: "uint256",
+      },
+      {
+        internalType: "address",
+        name: "owner",
+        type: "address",
       },
     ],
-    "name": "ERC721InvalidOperator",
-    "type": "error",
+    name: "ERC721IncorrectOwner",
+    type: "error",
   },
   {
-    "inputs": [
+    inputs: [
       {
-        "internalType": "address",
-        "name": "owner",
-        "type": "address",
+        internalType: "address",
+        name: "operator",
+        type: "address",
+      },
+      {
+        internalType: "uint256",
+        name: "tokenId",
+        type: "uint256",
       },
     ],
-    "name": "ERC721InvalidOwner",
-    "type": "error",
+    name: "ERC721InsufficientApproval",
+    type: "error",
   },
   {
-    "inputs": [
+    inputs: [
       {
-        "internalType": "address",
-        "name": "receiver",
-        "type": "address",
+        internalType: "address",
+        name: "approver",
+        type: "address",
       },
     ],
-    "name": "ERC721InvalidReceiver",
-    "type": "error",
+    name: "ERC721InvalidApprover",
+    type: "error",
   },
   {
-    "inputs": [
+    inputs: [
       {
-        "internalType": "address",
-        "name": "sender",
-        "type": "address",
+        internalType: "address",
+        name: "operator",
+        type: "address",
       },
     ],
-    "name": "ERC721InvalidSender",
-    "type": "error",
+    name: "ERC721InvalidOperator",
+    type: "error",
   },
   {
-    "inputs": [
+    inputs: [
       {
-        "internalType": "uint256",
-        "name": "tokenId",
-        "type": "uint256",
+        internalType: "address",
+        name: "owner",
+        type: "address",
       },
     ],
-    "name": "ERC721NonexistentToken",
-    "type": "error",
+    name: "ERC721InvalidOwner",
+    type: "error",
   },
   {
-    "inputs": [],
-    "name": "InsufficientAmount",
-    "type": "error",
-  },
-  {
-    "inputs": [],
-    "name": "InsufficientValue",
-    "type": "error",
-  },
-  {
-    "inputs": [],
-    "name": "InvalidEAS",
-    "type": "error",
-  },
-  {
-    "inputs": [],
-    "name": "InvalidLength",
-    "type": "error",
-  },
-  {
-    "inputs": [],
-    "name": "NotPayable",
-    "type": "error",
-  },
-  {
-    "inputs": [],
-    "name": "PassportAlreadyMinted",
-    "type": "error",
-  },
-  {
-    "inputs": [],
-    "name": "PassportCannotBeTransfered",
-    "type": "error",
-  },
-  {
-    "inputs": [],
-    "name": "PassportNotMinted",
-    "type": "error",
-  },
-  {
-    "inputs": [],
-    "name": "TransferFailed",
-    "type": "error",
-  },
-  {
-    "inputs": [
+    inputs: [
       {
-        "internalType": "address",
-        "name": "",
-        "type": "address",
+        internalType: "address",
+        name: "receiver",
+        type: "address",
       },
     ],
-    "name": "Unauthorized",
-    "type": "error",
+    name: "ERC721InvalidReceiver",
+    type: "error",
   },
   {
-    "anonymous": false,
-    "inputs": [
+    inputs: [
       {
-        "indexed": true,
-        "internalType": "address",
-        "name": "owner",
-        "type": "address",
-      },
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "approved",
-        "type": "address",
-      },
-      {
-        "indexed": true,
-        "internalType": "uint256",
-        "name": "tokenId",
-        "type": "uint256",
+        internalType: "address",
+        name: "sender",
+        type: "address",
       },
     ],
-    "name": "Approval",
-    "type": "event",
+    name: "ERC721InvalidSender",
+    type: "error",
   },
   {
-    "anonymous": false,
-    "inputs": [
+    inputs: [
       {
-        "indexed": true,
-        "internalType": "address",
-        "name": "owner",
-        "type": "address",
-      },
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "operator",
-        "type": "address",
-      },
-      {
-        "indexed": false,
-        "internalType": "bool",
-        "name": "approved",
-        "type": "bool",
+        internalType: "uint256",
+        name: "tokenId",
+        type: "uint256",
       },
     ],
-    "name": "ApprovalForAll",
-    "type": "event",
+    name: "ERC721NonexistentToken",
+    type: "error",
   },
   {
-    "anonymous": false,
-    "inputs": [
+    inputs: [],
+    name: "InsufficientAmount",
+    type: "error",
+  },
+  {
+    inputs: [],
+    name: "InsufficientValue",
+    type: "error",
+  },
+  {
+    inputs: [],
+    name: "InvalidEAS",
+    type: "error",
+  },
+  {
+    inputs: [],
+    name: "InvalidLength",
+    type: "error",
+  },
+  {
+    inputs: [],
+    name: "NotPayable",
+    type: "error",
+  },
+  {
+    inputs: [
       {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "_fromTokenId",
-        "type": "uint256",
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "_toTokenId",
-        "type": "uint256",
+        internalType: "address",
+        name: "owner",
+        type: "address",
       },
     ],
-    "name": "BatchMetadataUpdate",
-    "type": "event",
+    name: "OwnableInvalidOwner",
+    type: "error",
   },
   {
-    "anonymous": false,
-    "inputs": [
+    inputs: [
       {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "_tokenId",
-        "type": "uint256",
+        internalType: "address",
+        name: "account",
+        type: "address",
       },
     ],
-    "name": "MetadataUpdate",
-    "type": "event",
+    name: "OwnableUnauthorizedAccount",
+    type: "error",
   },
   {
-    "anonymous": false,
-    "inputs": [
+    inputs: [],
+    name: "PassportAlreadyMinted",
+    type: "error",
+  },
+  {
+    inputs: [],
+    name: "PassportCannotBeTransfered",
+    type: "error",
+  },
+  {
+    inputs: [],
+    name: "PassportNotMinted",
+    type: "error",
+  },
+  {
+    inputs: [],
+    name: "TransferFailed",
+    type: "error",
+  },
+  {
+    inputs: [
       {
-        "indexed": false,
-        "internalType": "address",
-        "name": "user",
-        "type": "address",
+        internalType: "address",
+        name: "",
+        type: "address",
       },
     ],
-    "name": "PassportCreated",
-    "type": "event",
+    name: "Unauthorized",
+    type: "error",
   },
   {
-    "anonymous": false,
-    "inputs": [
+    anonymous: false,
+    inputs: [
       {
-        "indexed": true,
-        "internalType": "address",
-        "name": "from",
-        "type": "address",
+        indexed: true,
+        internalType: "address",
+        name: "owner",
+        type: "address",
       },
       {
-        "indexed": true,
-        "internalType": "address",
-        "name": "to",
-        "type": "address",
+        indexed: true,
+        internalType: "address",
+        name: "approved",
+        type: "address",
       },
       {
-        "indexed": true,
-        "internalType": "uint256",
-        "name": "tokenId",
-        "type": "uint256",
+        indexed: true,
+        internalType: "uint256",
+        name: "tokenId",
+        type: "uint256",
       },
     ],
-    "name": "Transfer",
-    "type": "event",
+    name: "Approval",
+    type: "event",
   },
   {
-    "inputs": [],
-    "name": "MINT_PRICE",
-    "outputs": [
+    anonymous: false,
+    inputs: [
       {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256",
+        indexed: true,
+        internalType: "address",
+        name: "owner",
+        type: "address",
+      },
+      {
+        indexed: true,
+        internalType: "address",
+        name: "operator",
+        type: "address",
+      },
+      {
+        indexed: false,
+        internalType: "bool",
+        name: "approved",
+        type: "bool",
       },
     ],
-    "stateMutability": "view",
-    "type": "function",
+    name: "ApprovalForAll",
+    type: "event",
   },
   {
-    "inputs": [
+    anonymous: false,
+    inputs: [
       {
-        "internalType": "address",
-        "name": "to",
-        "type": "address",
+        indexed: false,
+        internalType: "uint256",
+        name: "_fromTokenId",
+        type: "uint256",
       },
       {
-        "internalType": "uint256",
-        "name": "tokenId",
-        "type": "uint256",
+        indexed: false,
+        internalType: "uint256",
+        name: "_toTokenId",
+        type: "uint256",
       },
     ],
-    "name": "approve",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function",
+    name: "BatchMetadataUpdate",
+    type: "event",
   },
   {
-    "inputs": [
+    anonymous: false,
+    inputs: [
       {
-        "components": [
+        indexed: false,
+        internalType: "uint256",
+        name: "_tokenId",
+        type: "uint256",
+      },
+    ],
+    name: "MetadataUpdate",
+    type: "event",
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: "address",
+        name: "previousOwner",
+        type: "address",
+      },
+      {
+        indexed: true,
+        internalType: "address",
+        name: "newOwner",
+        type: "address",
+      },
+    ],
+    name: "OwnershipTransferred",
+    type: "event",
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: false,
+        internalType: "address",
+        name: "user",
+        type: "address",
+      },
+    ],
+    name: "PassportCreated",
+    type: "event",
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: "address",
+        name: "from",
+        type: "address",
+      },
+      {
+        indexed: true,
+        internalType: "address",
+        name: "to",
+        type: "address",
+      },
+      {
+        indexed: true,
+        internalType: "uint256",
+        name: "tokenId",
+        type: "uint256",
+      },
+    ],
+    name: "Transfer",
+    type: "event",
+  },
+  {
+    inputs: [],
+    name: "MINT_PRICE",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "to",
+        type: "address",
+      },
+      {
+        internalType: "uint256",
+        name: "tokenId",
+        type: "uint256",
+      },
+    ],
+    name: "approve",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        components: [
           {
-            "internalType": "bytes32",
-            "name": "uid",
-            "type": "bytes32",
+            internalType: "bytes32",
+            name: "uid",
+            type: "bytes32",
           },
           {
-            "internalType": "bytes32",
-            "name": "schema",
-            "type": "bytes32",
+            internalType: "bytes32",
+            name: "schema",
+            type: "bytes32",
           },
           {
-            "internalType": "uint64",
-            "name": "time",
-            "type": "uint64",
+            internalType: "uint64",
+            name: "time",
+            type: "uint64",
           },
           {
-            "internalType": "uint64",
-            "name": "expirationTime",
-            "type": "uint64",
+            internalType: "uint64",
+            name: "expirationTime",
+            type: "uint64",
           },
           {
-            "internalType": "uint64",
-            "name": "revocationTime",
-            "type": "uint64",
+            internalType: "uint64",
+            name: "revocationTime",
+            type: "uint64",
           },
           {
-            "internalType": "bytes32",
-            "name": "refUID",
-            "type": "bytes32",
+            internalType: "bytes32",
+            name: "refUID",
+            type: "bytes32",
           },
           {
-            "internalType": "address",
-            "name": "recipient",
-            "type": "address",
+            internalType: "address",
+            name: "recipient",
+            type: "address",
           },
           {
-            "internalType": "address",
-            "name": "attester",
-            "type": "address",
+            internalType: "address",
+            name: "attester",
+            type: "address",
           },
           {
-            "internalType": "bool",
-            "name": "revocable",
-            "type": "bool",
+            internalType: "bool",
+            name: "revocable",
+            type: "bool",
           },
           {
-            "internalType": "bytes",
-            "name": "data",
-            "type": "bytes",
-          },
-        ],
-        "internalType": "struct Attestation",
-        "name": "attestation",
-        "type": "tuple",
-      },
-    ],
-    "name": "attest",
-    "outputs": [
-      {
-        "internalType": "bool",
-        "name": "",
-        "type": "bool",
-      },
-    ],
-    "stateMutability": "payable",
-    "type": "function",
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "member",
-        "type": "address",
-      },
-    ],
-    "name": "authorize",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function",
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "owner",
-        "type": "address",
-      },
-    ],
-    "name": "balanceOf",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256",
-      },
-    ],
-    "stateMutability": "view",
-    "type": "function",
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "string",
-        "name": "_name",
-        "type": "string",
-      },
-      {
-        "internalType": "string",
-        "name": "_placeOfBirth",
-        "type": "string",
-      },
-      {
-        "internalType": "uint256",
-        "name": "_dateOfBirth",
-        "type": "uint256",
-      },
-      {
-        "internalType": "string",
-        "name": "uri",
-        "type": "string",
-      },
-    ],
-    "name": "createPassport",
-    "outputs": [],
-    "stateMutability": "payable",
-    "type": "function",
-  },
-  {
-    "inputs": [],
-    "name": "getAllAuthorizedMembers",
-    "outputs": [
-      {
-        "internalType": "address[]",
-        "name": "",
-        "type": "address[]",
-      },
-    ],
-    "stateMutability": "view",
-    "type": "function",
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "tokenId",
-        "type": "uint256",
-      },
-    ],
-    "name": "getApproved",
-    "outputs": [
-      {
-        "internalType": "address",
-        "name": "",
-        "type": "address",
-      },
-    ],
-    "stateMutability": "view",
-    "type": "function",
-  },
-  {
-    "inputs": [],
-    "name": "getPassport",
-    "outputs": [
-      {
-        "internalType": "string",
-        "name": "name",
-        "type": "string",
-      },
-      {
-        "internalType": "string",
-        "name": "placeOfBirth",
-        "type": "string",
-      },
-      {
-        "internalType": "uint256",
-        "name": "dateOfBirth",
-        "type": "uint256",
-      },
-      {
-        "internalType": "uint256",
-        "name": "issueDate",
-        "type": "uint256",
-      },
-    ],
-    "stateMutability": "view",
-    "type": "function",
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "owner",
-        "type": "address",
-      },
-      {
-        "internalType": "address",
-        "name": "operator",
-        "type": "address",
-      },
-    ],
-    "name": "isApprovedForAll",
-    "outputs": [
-      {
-        "internalType": "bool",
-        "name": "",
-        "type": "bool",
-      },
-    ],
-    "stateMutability": "view",
-    "type": "function",
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "member",
-        "type": "address",
-      },
-    ],
-    "name": "isAuthorzedMember",
-    "outputs": [
-      {
-        "internalType": "bool",
-        "name": "",
-        "type": "bool",
-      },
-    ],
-    "stateMutability": "view",
-    "type": "function",
-  },
-  {
-    "inputs": [],
-    "name": "isPayable",
-    "outputs": [
-      {
-        "internalType": "bool",
-        "name": "",
-        "type": "bool",
-      },
-    ],
-    "stateMutability": "pure",
-    "type": "function",
-  },
-  {
-    "inputs": [
-      {
-        "components": [
-          {
-            "internalType": "bytes32",
-            "name": "uid",
-            "type": "bytes32",
-          },
-          {
-            "internalType": "bytes32",
-            "name": "schema",
-            "type": "bytes32",
-          },
-          {
-            "internalType": "uint64",
-            "name": "time",
-            "type": "uint64",
-          },
-          {
-            "internalType": "uint64",
-            "name": "expirationTime",
-            "type": "uint64",
-          },
-          {
-            "internalType": "uint64",
-            "name": "revocationTime",
-            "type": "uint64",
-          },
-          {
-            "internalType": "bytes32",
-            "name": "refUID",
-            "type": "bytes32",
-          },
-          {
-            "internalType": "address",
-            "name": "recipient",
-            "type": "address",
-          },
-          {
-            "internalType": "address",
-            "name": "attester",
-            "type": "address",
-          },
-          {
-            "internalType": "bool",
-            "name": "revocable",
-            "type": "bool",
-          },
-          {
-            "internalType": "bytes",
-            "name": "data",
-            "type": "bytes",
+            internalType: "bytes",
+            name: "data",
+            type: "bytes",
           },
         ],
-        "internalType": "struct Attestation[]",
-        "name": "attestations",
-        "type": "tuple[]",
-      },
-      {
-        "internalType": "uint256[]",
-        "name": "values",
-        "type": "uint256[]",
+        internalType: "struct Attestation",
+        name: "attestation",
+        type: "tuple",
       },
     ],
-    "name": "multiAttest",
-    "outputs": [
+    name: "attest",
+    outputs: [
       {
-        "internalType": "bool",
-        "name": "",
-        "type": "bool",
+        internalType: "bool",
+        name: "",
+        type: "bool",
       },
     ],
-    "stateMutability": "payable",
-    "type": "function",
+    stateMutability: "payable",
+    type: "function",
   },
   {
-    "inputs": [
+    inputs: [
       {
-        "components": [
+        internalType: "address",
+        name: "member",
+        type: "address",
+      },
+    ],
+    name: "authorize",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "owner",
+        type: "address",
+      },
+    ],
+    name: "balanceOf",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "string",
+        name: "_name",
+        type: "string",
+      },
+      {
+        internalType: "string",
+        name: "_placeOfBirth",
+        type: "string",
+      },
+      {
+        internalType: "uint256",
+        name: "_dateOfBirth",
+        type: "uint256",
+      },
+      {
+        internalType: "string",
+        name: "uri",
+        type: "string",
+      },
+    ],
+    name: "createPassport",
+    outputs: [],
+    stateMutability: "payable",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "getAllAuthorizedMembers",
+    outputs: [
+      {
+        internalType: "address[]",
+        name: "",
+        type: "address[]",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "tokenId",
+        type: "uint256",
+      },
+    ],
+    name: "getApproved",
+    outputs: [
+      {
+        internalType: "address",
+        name: "",
+        type: "address",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "getPassport",
+    outputs: [
+      {
+        internalType: "string",
+        name: "name",
+        type: "string",
+      },
+      {
+        internalType: "string",
+        name: "placeOfBirth",
+        type: "string",
+      },
+      {
+        internalType: "uint256",
+        name: "dateOfBirth",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "issueDate",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "owner",
+        type: "address",
+      },
+      {
+        internalType: "address",
+        name: "operator",
+        type: "address",
+      },
+    ],
+    name: "isApprovedForAll",
+    outputs: [
+      {
+        internalType: "bool",
+        name: "",
+        type: "bool",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "member",
+        type: "address",
+      },
+    ],
+    name: "isAuthorzedMember",
+    outputs: [
+      {
+        internalType: "bool",
+        name: "",
+        type: "bool",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "isPayable",
+    outputs: [
+      {
+        internalType: "bool",
+        name: "",
+        type: "bool",
+      },
+    ],
+    stateMutability: "pure",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        components: [
           {
-            "internalType": "bytes32",
-            "name": "uid",
-            "type": "bytes32",
+            internalType: "bytes32",
+            name: "uid",
+            type: "bytes32",
           },
           {
-            "internalType": "bytes32",
-            "name": "schema",
-            "type": "bytes32",
+            internalType: "bytes32",
+            name: "schema",
+            type: "bytes32",
           },
           {
-            "internalType": "uint64",
-            "name": "time",
-            "type": "uint64",
+            internalType: "uint64",
+            name: "time",
+            type: "uint64",
           },
           {
-            "internalType": "uint64",
-            "name": "expirationTime",
-            "type": "uint64",
+            internalType: "uint64",
+            name: "expirationTime",
+            type: "uint64",
           },
           {
-            "internalType": "uint64",
-            "name": "revocationTime",
-            "type": "uint64",
+            internalType: "uint64",
+            name: "revocationTime",
+            type: "uint64",
           },
           {
-            "internalType": "bytes32",
-            "name": "refUID",
-            "type": "bytes32",
+            internalType: "bytes32",
+            name: "refUID",
+            type: "bytes32",
           },
           {
-            "internalType": "address",
-            "name": "recipient",
-            "type": "address",
+            internalType: "address",
+            name: "recipient",
+            type: "address",
           },
           {
-            "internalType": "address",
-            "name": "attester",
-            "type": "address",
+            internalType: "address",
+            name: "attester",
+            type: "address",
           },
           {
-            "internalType": "bool",
-            "name": "revocable",
-            "type": "bool",
+            internalType: "bool",
+            name: "revocable",
+            type: "bool",
           },
           {
-            "internalType": "bytes",
-            "name": "data",
-            "type": "bytes",
+            internalType: "bytes",
+            name: "data",
+            type: "bytes",
           },
         ],
-        "internalType": "struct Attestation[]",
-        "name": "attestations",
-        "type": "tuple[]",
+        internalType: "struct Attestation[]",
+        name: "attestations",
+        type: "tuple[]",
       },
       {
-        "internalType": "uint256[]",
-        "name": "values",
-        "type": "uint256[]",
+        internalType: "uint256[]",
+        name: "values",
+        type: "uint256[]",
       },
     ],
-    "name": "multiRevoke",
-    "outputs": [
+    name: "multiAttest",
+    outputs: [
       {
-        "internalType": "bool",
-        "name": "",
-        "type": "bool",
+        internalType: "bool",
+        name: "",
+        type: "bool",
       },
     ],
-    "stateMutability": "payable",
-    "type": "function",
+    stateMutability: "payable",
+    type: "function",
   },
   {
-    "inputs": [],
-    "name": "name",
-    "outputs": [
+    inputs: [
       {
-        "internalType": "string",
-        "name": "",
-        "type": "string",
-      },
-    ],
-    "stateMutability": "view",
-    "type": "function",
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "tokenId",
-        "type": "uint256",
-      },
-    ],
-    "name": "ownerOf",
-    "outputs": [
-      {
-        "internalType": "address",
-        "name": "",
-        "type": "address",
-      },
-    ],
-    "stateMutability": "view",
-    "type": "function",
-  },
-  {
-    "inputs": [
-      {
-        "components": [
+        components: [
           {
-            "internalType": "bytes32",
-            "name": "uid",
-            "type": "bytes32",
+            internalType: "bytes32",
+            name: "uid",
+            type: "bytes32",
           },
           {
-            "internalType": "bytes32",
-            "name": "schema",
-            "type": "bytes32",
+            internalType: "bytes32",
+            name: "schema",
+            type: "bytes32",
           },
           {
-            "internalType": "uint64",
-            "name": "time",
-            "type": "uint64",
+            internalType: "uint64",
+            name: "time",
+            type: "uint64",
           },
           {
-            "internalType": "uint64",
-            "name": "expirationTime",
-            "type": "uint64",
+            internalType: "uint64",
+            name: "expirationTime",
+            type: "uint64",
           },
           {
-            "internalType": "uint64",
-            "name": "revocationTime",
-            "type": "uint64",
+            internalType: "uint64",
+            name: "revocationTime",
+            type: "uint64",
           },
           {
-            "internalType": "bytes32",
-            "name": "refUID",
-            "type": "bytes32",
+            internalType: "bytes32",
+            name: "refUID",
+            type: "bytes32",
           },
           {
-            "internalType": "address",
-            "name": "recipient",
-            "type": "address",
+            internalType: "address",
+            name: "recipient",
+            type: "address",
           },
           {
-            "internalType": "address",
-            "name": "attester",
-            "type": "address",
+            internalType: "address",
+            name: "attester",
+            type: "address",
           },
           {
-            "internalType": "bool",
-            "name": "revocable",
-            "type": "bool",
+            internalType: "bool",
+            name: "revocable",
+            type: "bool",
           },
           {
-            "internalType": "bytes",
-            "name": "data",
-            "type": "bytes",
+            internalType: "bytes",
+            name: "data",
+            type: "bytes",
           },
         ],
-        "internalType": "struct Attestation",
-        "name": "attestation",
-        "type": "tuple",
+        internalType: "struct Attestation[]",
+        name: "attestations",
+        type: "tuple[]",
       },
-    ],
-    "name": "revoke",
-    "outputs": [
       {
-        "internalType": "bool",
-        "name": "",
-        "type": "bool",
+        internalType: "uint256[]",
+        name: "values",
+        type: "uint256[]",
       },
     ],
-    "stateMutability": "payable",
-    "type": "function",
+    name: "multiRevoke",
+    outputs: [
+      {
+        internalType: "bool",
+        name: "",
+        type: "bool",
+      },
+    ],
+    stateMutability: "payable",
+    type: "function",
   },
   {
-    "inputs": [
+    inputs: [],
+    name: "name",
+    outputs: [
       {
-        "internalType": "address",
-        "name": "from",
-        "type": "address",
-      },
-      {
-        "internalType": "address",
-        "name": "to",
-        "type": "address",
-      },
-      {
-        "internalType": "uint256",
-        "name": "tokenId",
-        "type": "uint256",
+        internalType: "string",
+        name: "",
+        type: "string",
       },
     ],
-    "name": "safeTransferFrom",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function",
+    stateMutability: "view",
+    type: "function",
   },
   {
-    "inputs": [
+    inputs: [],
+    name: "owner",
+    outputs: [
       {
-        "internalType": "address",
-        "name": "from",
-        "type": "address",
-      },
-      {
-        "internalType": "address",
-        "name": "to",
-        "type": "address",
-      },
-      {
-        "internalType": "uint256",
-        "name": "tokenId",
-        "type": "uint256",
-      },
-      {
-        "internalType": "bytes",
-        "name": "data",
-        "type": "bytes",
+        internalType: "address",
+        name: "",
+        type: "address",
       },
     ],
-    "name": "safeTransferFrom",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function",
+    stateMutability: "view",
+    type: "function",
   },
   {
-    "inputs": [
+    inputs: [
       {
-        "internalType": "address",
-        "name": "operator",
-        "type": "address",
-      },
-      {
-        "internalType": "bool",
-        "name": "approved",
-        "type": "bool",
+        internalType: "uint256",
+        name: "tokenId",
+        type: "uint256",
       },
     ],
-    "name": "setApprovalForAll",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function",
+    name: "ownerOf",
+    outputs: [
+      {
+        internalType: "address",
+        name: "",
+        type: "address",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
   },
   {
-    "inputs": [
-      {
-        "internalType": "bytes4",
-        "name": "interfaceId",
-        "type": "bytes4",
-      },
-    ],
-    "name": "supportsInterface",
-    "outputs": [
-      {
-        "internalType": "bool",
-        "name": "",
-        "type": "bool",
-      },
-    ],
-    "stateMutability": "view",
-    "type": "function",
+    inputs: [],
+    name: "renounceOwnership",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
   },
   {
-    "inputs": [],
-    "name": "symbol",
-    "outputs": [
+    inputs: [
       {
-        "internalType": "string",
-        "name": "",
-        "type": "string",
+        components: [
+          {
+            internalType: "bytes32",
+            name: "uid",
+            type: "bytes32",
+          },
+          {
+            internalType: "bytes32",
+            name: "schema",
+            type: "bytes32",
+          },
+          {
+            internalType: "uint64",
+            name: "time",
+            type: "uint64",
+          },
+          {
+            internalType: "uint64",
+            name: "expirationTime",
+            type: "uint64",
+          },
+          {
+            internalType: "uint64",
+            name: "revocationTime",
+            type: "uint64",
+          },
+          {
+            internalType: "bytes32",
+            name: "refUID",
+            type: "bytes32",
+          },
+          {
+            internalType: "address",
+            name: "recipient",
+            type: "address",
+          },
+          {
+            internalType: "address",
+            name: "attester",
+            type: "address",
+          },
+          {
+            internalType: "bool",
+            name: "revocable",
+            type: "bool",
+          },
+          {
+            internalType: "bytes",
+            name: "data",
+            type: "bytes",
+          },
+        ],
+        internalType: "struct Attestation",
+        name: "attestation",
+        type: "tuple",
       },
     ],
-    "stateMutability": "view",
-    "type": "function",
+    name: "revoke",
+    outputs: [
+      {
+        internalType: "bool",
+        name: "",
+        type: "bool",
+      },
+    ],
+    stateMutability: "payable",
+    type: "function",
   },
   {
-    "inputs": [
+    inputs: [
       {
-        "internalType": "uint256",
-        "name": "tokenId",
-        "type": "uint256",
+        internalType: "address",
+        name: "from",
+        type: "address",
+      },
+      {
+        internalType: "address",
+        name: "to",
+        type: "address",
+      },
+      {
+        internalType: "uint256",
+        name: "tokenId",
+        type: "uint256",
       },
     ],
-    "name": "tokenURI",
-    "outputs": [
-      {
-        "internalType": "string",
-        "name": "",
-        "type": "string",
-      },
-    ],
-    "stateMutability": "view",
-    "type": "function",
+    name: "safeTransferFrom",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
   },
   {
-    "inputs": [
+    inputs: [
       {
-        "internalType": "address",
-        "name": "from",
-        "type": "address",
+        internalType: "address",
+        name: "from",
+        type: "address",
       },
       {
-        "internalType": "address",
-        "name": "to",
-        "type": "address",
+        internalType: "address",
+        name: "to",
+        type: "address",
       },
       {
-        "internalType": "uint256",
-        "name": "tokenId",
-        "type": "uint256",
+        internalType: "uint256",
+        name: "tokenId",
+        type: "uint256",
       },
-    ],
-    "name": "transferFrom",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function",
-  },
-  {
-    "inputs": [
       {
-        "internalType": "address",
-        "name": "member",
-        "type": "address",
+        internalType: "bytes",
+        name: "data",
+        type: "bytes",
       },
     ],
-    "name": "unauthorize",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function",
+    name: "safeTransferFrom",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
   },
   {
-    "inputs": [],
-    "name": "version",
-    "outputs": [
+    inputs: [
       {
-        "internalType": "string",
-        "name": "",
-        "type": "string",
+        internalType: "address",
+        name: "operator",
+        type: "address",
+      },
+      {
+        internalType: "bool",
+        name: "approved",
+        type: "bool",
       },
     ],
-    "stateMutability": "view",
-    "type": "function",
+    name: "setApprovalForAll",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
   },
   {
-    "stateMutability": "payable",
-    "type": "receive",
+    inputs: [
+      {
+        internalType: "bytes4",
+        name: "interfaceId",
+        type: "bytes4",
+      },
+    ],
+    name: "supportsInterface",
+    outputs: [
+      {
+        internalType: "bool",
+        name: "",
+        type: "bool",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "symbol",
+    outputs: [
+      {
+        internalType: "string",
+        name: "",
+        type: "string",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "tokenId",
+        type: "uint256",
+      },
+    ],
+    name: "tokenURI",
+    outputs: [
+      {
+        internalType: "string",
+        name: "",
+        type: "string",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "from",
+        type: "address",
+      },
+      {
+        internalType: "address",
+        name: "to",
+        type: "address",
+      },
+      {
+        internalType: "uint256",
+        name: "tokenId",
+        type: "uint256",
+      },
+    ],
+    name: "transferFrom",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "newOwner",
+        type: "address",
+      },
+    ],
+    name: "transferOwnership",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "member",
+        type: "address",
+      },
+    ],
+    name: "unauthorize",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "version",
+    outputs: [
+      {
+        internalType: "string",
+        name: "",
+        type: "string",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "withdraw",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    stateMutability: "payable",
+    type: "receive",
   },
 ];
-
-module.exports = {
-  PASSPORT_RESOLVER_ABI,
-  EAS_CONTRACT_ADDRESS,
-  PASSPORT_RESOLVER_CONTRACT_ADDRESS,
-  SCHEMA_UID,
-};
