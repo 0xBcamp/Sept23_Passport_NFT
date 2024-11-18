@@ -1125,3 +1125,10 @@ const PASSPORT_RESOLVER_ABI = [
     type: "receive",
   },
 ];
+
+module.exports = {
+  PASSPORT_RESOLVER_ABI,
+  PASSPORT_RESOLVER_CONTRACT_ADDRESS,
+  SCHEMA_UID,
+  EAS_CONTRACT_ADDRESS,
+};

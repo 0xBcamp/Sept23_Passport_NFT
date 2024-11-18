@@ -79,7 +79,9 @@ contract PassportResolver is SchemaResolver, ERC721, ERC721URIStorage, Ownable {
      * @notice The owner can withdraw the balance of the contract by calling this function.
      */
     function withdraw() external onlyOwner {
-      (bool success, ) = payable(owner()).call{value: address(this).balance}("");
+        (bool success, ) = payable(owner()).call{value: address(this).balance}(
+            ""
+        );
         if (!success) {
             revert TransferFailed();
         }

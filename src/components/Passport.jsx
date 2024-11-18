@@ -1,15 +1,16 @@
-import { Button } from "@/components/ui/button";
-import {
-  CardTitle,
-  CardHeader,
-  CardContent,
-  Card,
-  CardDescription,
-} from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { AvatarImage, AvatarFallback, Avatar } from "@/components/ui/avatar";
+"use client";
 
-export function Passport({}) {
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+
+export function Passport() {
   return (
     <main className="flex flex-col items-center justify-center h-screen p-4 md:p-0 bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200">
       <div className="grid gap-6 grid-cols-1 lg:grid-cols-2 max-w-full">
